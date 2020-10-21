@@ -414,7 +414,7 @@
                 <!-- end page title --> 
 
                 <div class="col-xl-12">
-                    <ul class="nav nav-tabs">
+                    <ul class="nav nav-tabs nav-justified">
                         <li class="nav-item">
                             <a href="#d-personales" data-toggle="tab" aria-expanded="false" class="nav-link active">
                                 <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
@@ -648,6 +648,11 @@
                                             <input type="checkbox" name="" id="leysis"> <label for="impagri">No aplíca Ley SIS</label> <br>
 
                                         </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <button type="button" class="btn btn-success waves-effect width-md waves-light">Guardar</button>
                                     </div>
                                 </div>
                             </div>
