@@ -413,252 +413,304 @@
             <!-- end page title --> 
 
             <div class="col-xl-12">
-                <ul class="nav nav-tabs">
-                    <li class="nav-item">
-                        <a href="#d-personales" data-toggle="tab" aria-expanded="false" class="nav-link active">
-                            <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
-                            <span class="d-none d-sm-block">Datos Personales</span>            
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#d-laborales" data-toggle="tab" aria-expanded="true" class="nav-link">
-                            <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
-                            <span class="d-none d-sm-block">Datos Laborales</span> 
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#d-previsional" data-toggle="tab" aria-expanded="false" class="nav-link">
-                            <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
-                            <span class="d-none d-sm-block">Dato Previsional</span>    
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#c-familiares" data-toggle="tab" aria-expanded="false" class="nav-link">
-                            <span class="d-block d-sm-none"><i class="fas fa-cog"></i></span>
-                            <span class="d-none d-sm-block">Cargas Familiares</span>  
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#observaciones" data-toggle="tab" aria-expanded="false" class="nav-link">
-                            <span class="d-block d-sm-none"><i class="fas fa-cog"></i></span>
-                            <span class="d-none d-sm-block">Observaciones</span>  
-                        </a>
-                    </li>
-                </ul>
+                
+                <div class="card-box" style="background-color: white">
+                    <div class="col-md-12">
 
-                <div class="tab-content" style="background-color: white">
-                    <div role="tabpanel" class="tab-pane fade show active" id="d-personales">
-                        <p class="mb-0">Pestaña 1.</p>
-                    </div>
-                    <div role="tabpanel" class="tab-pane fade" id="d-laborales">
+                        <div class="card-box" style="background-color: #f1f5f7"> <!-- 1ra Fila: Datos Empleado -->
+                            <h4 class="mt-0 mb-3 header-title">Datos Personales</h4>
+
+                            <form role="form">
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="rutempleado">RUT Empleado</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="ej: 12345678-9">
+                                            <div class="input-group-append">
+                                                <button type="submit" class="btn btn-primary" id="botonimportar" style="background-color: #355d8e; border-color: #355d8e" >Importar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="nombre">Nombre</label>
+                                        <input type="text" class="form-control" id="nombre" disabled>
+                                    </div>
+                                </div>
+                            </form>
+                        </div> 
+
                         <div class="col-md-12">
-                            <div class="card-box" style="background-color: #f1f5f7"> <!-- 1ra Fila: Datos Empleado -->
-                                <h4 class="mt-0 mb-3 header-title">Datos Empleado</h4>
-    
-                                <form role="form">
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <label for="rutempleado">RUT Empleado</label>
-                                            <div class="input-group">
-                                                <input type="text" class="form-control" placeholder="ej: 12345678-9">
-                                                <div class="input-group-append">
-                                                    <button type="submit" class="btn btn-primary" id="botonimportar" style="background-color: #355d8e; border-color: #355d8e" >Importar</button>
+                            <ul class="nav nav-tabs nav-justified">
+                                <li class="nav-item">
+                                    <a href="#s-mes" data-toggle="tab" aria-expanded="false" class="nav-link active">
+                                        <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
+                                        <span class="d-none d-sm-block">Datos Personales</span>            
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#habydes" data-toggle="tab" aria-expanded="true" class="nav-link">
+                                        <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
+                                        <span class="d-none d-sm-block">Datos Laborales</span> 
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#licenyperm" data-toggle="tab" aria-expanded="false" class="nav-link">
+                                        <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
+                                        <span class="d-none d-sm-block">Dato Previsional</span>    
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#listado" data-toggle="tab" aria-expanded="false" class="nav-link">
+                                        <span class="d-block d-sm-none"><i class="fas fa-cog"></i></span>
+                                        <span class="d-none d-sm-block">Cargas Familiares</span>  
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#movimientos" data-toggle="tab" aria-expanded="false" class="nav-link">
+                                        <span class="d-block d-sm-none"><i class="fas fa-cog"></i></span>
+                                        <span class="d-none d-sm-block">Movimientos</span>  
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane fade show active" id="s-mes">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="row">
+                                                <label class="col-sm-2  col-form-label" for="simpleinput">Número de Contacto</label>
+                                                <div class="col-sm-4">
+                                                    <input type="number" id="simpleinput" class="form-control" placeholder="0">
+                                                </div>
+
+                                                <label class="col-sm-2  col-form-label" for="simpleinput">Fecha de Contrato</label>
+                                                <div class="col-sm-4">
+                                                <input type="text" id="simpleinput" class="form-control datepicker" value="{{ date('d-m-Y') }}">
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="form-group col-md-6">
-                                            <label for="nombre">Nombre</label>
-                                            <input type="text" class="form-control" id="nombre" disabled>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div> 
-                            <div class="row"> <!-- 2da Fila: Sueldo, Otros Antecedentes y Contratación -->
-                                <div class="col-md-3"> <!-- Sueldo y Semana -->
-                                    <div class="card-box" style="background-color: #f1f5f7">
-                                        <h4 class="mt-0 mb-3 header-title">Sueldo</h4>
-                                        
-                                        <label for="">Tipo:</label>
-                                        <select name="select-tipo" id="" class="form-control select">
-                                            <option>Seleccione Opción</option>
-                                            <option value="">Mensual</option>
-                                            <option value="">Anual</option>
-                                            <option value="">Semestral</option>
-                                            <option value="">Semanal</option>
-                                            <option value="">Diario</option>
-                                        </select>
+                                    </div> <br>
 
-                                        <label for="">Moneda:</label>
-                                        <select name="select-moneda" id="" class="form-control">
-                                            <option>Seleccione Opción</option>
-                                            <option value="">Peso</option>
-                                            <option value="">Dolares</option>
-                                            <option value="">Euros</option>
-                                            <option value="">Libras</option>
-                                        </select>
+                                    <div class="row"> <!-- 2da Fila: Sueldo, Otros Antecedentes y Contratación -->
 
-                                        <label for="">Día Cambio:</label>
-                                        <input type="number" placeholder="Ingrese Día" class="form-control">
+                                        <div class="col-md-4"> <!-- Días -->
+                                            <div class="card-box" style="background-color: #f1f5f7">
+                                                <h4 class="mt-0 mb-3 header-title">Contratación</h4>
 
-                                        <label for="">Monto:</label>
-                                        <input type="number" placeholder="Ingrese Monto" class="form-control">
+                                                <div class="form-group row">
+                                                    <label class="col-sm-3  col-form-label" for="dausentes">Ausentes:</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="number" id="dausentes" class="form-control" placeholder="0">
+                                                    </div>
+                                                </div>
 
-                                        <input type="checkbox"> <label for="">No Calcula Ajuste Sueldo Base</label>
-                                    </div>
-                                    <div class="card-box" style="background-color: #f1f5f7">
-                                        <h4 class="mt-0 mb-3 header-title">Semana</h4>
+                                                <div class="form-group row">
+                                                    <label class="col-sm-3  col-form-label" for="dnocontratados">No Contratados:</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="number" id="dnocontratados" class="form-control" placeholder="0">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label class="col-sm-3  col-form-label" for="dlicencia">Licencia:</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="number" id="dlicencia" class="form-control" placeholder="0">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label class="col-sm-3  col-form-label" for="dlocomocion">Locomoción:</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="number" id="dlocomocion" class="form-control" placeholder="0">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label class="col-sm-3  col-form-label" for="dcolacion">Colación:</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="number" id="dcolacion" class="form-control" placeholder="0">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div> 
+
+                                        <div class="col-md-3"> <!-- Hrs. Extray hrs. Descuento -->
+                                            <div class="card-box" style="background-color: #f1f5f7">
+                                                <h4 class="mt-0 mb-3 header-title">Horas Extras</h4>
+
+                                                <div class="form-group row">
+                                                    <label class="col-sm-4 col-form-label" for="hnormal">Normal:</label>
+                                                    <div class="col-sm-8">
+                                                        <input type="number" id="hnormal" placeholder="0" class="form-control">
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="form-group row">
+                                                    <label class="col-sm-4 col-form-label" for="hnoche">Noche:</label>
+                                                    <div class="col-sm-8">
+                                                        <input type="number" id="hnoche" placeholder="0" class="form-control">
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="form-group row">
+                                                    <label class="col-sm-4 col-form-label" for="hfestivo">Festivo:</label>
+                                                    <div class="col-sm-8">
+                                                        <input type="number" id="hfestivo" placeholder="0" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-box" style="background-color: #f1f5f7">
+                                                <h4 class="mt-0 mb-3 header-title">Horas Descuento</h4>
+                    
+                                                <div class="form-group row">
+                                                    <label class="col-sm-4 col-form-label" for="hdescuento">Normal:</label>
+                                                    <div class="col-sm-8">
+                                                        <input type="number" id="hdescuento" placeholder="0" class="form-control">
+                                                    </div>
+                                                </div>
             
-                                        <label for="">Cantidad de Horas:</label>
-                                        <input type="number" placeholder="Ingrese Cantidad" class="form-control">
+                                            </div>
+                                        </div> 
 
-                                        <label for="">Cantidad de Días:</label>
-                                        <input type="number" placeholder="Ingrese Cantidad" class="form-control">
-
-
-                                    </div>
-                                </div> 
-                                <div class="col-md-3"> <!-- Otros Antecedentes y Forma de Pago -->
-                                    <div class="card-box" style="background-color: #f1f5f7">
-                                        <h4 class="mt-0 mb-3 header-title">Otros Antecedentes</h4>
+                                        <div class="col-md-5"> <!-- Otros y Otras rentas -->
+                                            <div class="card-box" style="background-color: #f1f5f7">
+                                                <h4 class="mt-0 mb-3 header-title">Otros</h4>
+                    
+                                                <div class="form-group row">
+                                                    <label class="col-sm-4 col-form-label" for="hnormal">Tipo Horas Extra:</label>
+                                                    <div class="col-sm-8">
+                                                        <select name="tipohorasextra" id="tipohorasextra" class="form-control">
+                                                            <option>Seleccione Opción</option>
+                                                            <option value="">Sueldo Base</option>
+                                                            <option value="">Sueldo Extra</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
             
-                                        <label for="">Locomoción:</label>
-                                        <input type="number" placeholder="Ingrese Monto" class="form-control">
-
-                                        <label for="">Colación:</label>
-                                        <input type="number" placeholder="Ingrese Monto" class="form-control">
-
-
-                                    </div>
-                                    <div class="card-box" style="background-color: #f1f5f7">
-                                        <h4 class="mt-0 mb-3 header-title">Forma de Pago</h4>
-                                        
-                                        <label for="">Tipo Pago:</label>
-                                        <select name="select-tipo" id="" class="form-control">
-                                            <option>Seleccione Opción</option>
-                                            <option value="">Efectivo</option>
-                                            <option value="">Deposito</option>
-                                            <option value="">Combos</option>
-                                            <option value="">Sentones</option>
-                                            <option value="">Besos</option>
-                                        </select>
-
-                                        <label for="">Banco:</label>
-                                        <select name="select-banco" id="" class="form-control">
-                                            <option>Seleccione Opción</option>
-                                            <option value="">Banco Estado</option>
-                                            <option value="">Banco de Crédito e Inversiones</option>
-                                            <option value="">Banco Carebeso</option>
-                                        </select>
-
-                                        <label for="">Cuenta Corriente:</label>
-                                        <input type="number" placeholder="Ingrese Número de Cuenta" class="form-control">
-
-                                        <label for="">Movimiento Banco:</label>
-                                        <select name="select-banco" id="" class="form-control">
-                                            <option>Seleccione Opción</option>
-                                            <option value="">Opción 1</option>
-                                            <option value="">Opción 2</option>
-                                            <option value="">Opción 3</option>
-                                        </select>
-                                    </div>
-                                </div> 
-                                <div class="col-md-6"> <!-- Contratación -->
-                                    <div class="card-box" style="background-color: #f1f5f7">
-                                        <h4 class="mt-0 mb-3 header-title">Contratación</h4>
             
-                                        <label for="">Fecha Contrato:</label>
-                                        <input type="date" placeholder="Ingrese Monto" class="form-control">
+                                            </div>
+                                            <div class="card-box" style="background-color: #f1f5f7">
+                                                <h4 class="mt-0 mb-3 header-title">Otras Rentas</h4>
+                                                
+                                                <div class="form-group row">
+                                                    <label class="col-sm-3 col-form-label" for="orentas">Otras Rentas:</label>
+                                                    <div class="col-sm-3">
+                                                        <input type="number" id="orentas" placeholder="0" class="form-control">
+                                                    </div>
 
-                                        <label for="select-cargo">Cargo:</label>
-                                        <select name="" id="select-cargo" class="form-control">
-                                            <option>Seleccione Opción</option>
-                                            <option value="">OPERARIO</option>
-                                            <option value="">FONTANERO</option>
-                                        </select>
+                                                    <label class="col-sm-3 col-form-label" for="misapre">Monto Isapre:</label>
+                                                    <div class="col-sm-3">
+                                                        <input type="number" id="misapre" placeholder="0" class="form-control">
+                                                    </div>
+                                                </div>
+            
+                                                <label for="">Banco:</label>
+                                                <select name="select-banco" id="" class="form-control">
+                                                    <option>Seleccione Opción</option>
+                                                    <option value="">Banco Estado</option>
+                                                    <option value="">Banco de Crédito e Inversiones</option>
+                                                    <option value="">Banco Carebeso</option>
+                                                </select>
 
-                                        <label for="labor">Labor:</label>
-                                        <input type="text" name="" id="labor" class="form-control">
+                                                <div class="form-group row">
+                                                    <label class="col-sm-12 col-form-label" for="hnormal">Monto Salud Descontado de la Base de Impuesto Único (en $):</label>
+                                                    <div class="col-sm-12">
+                                                        <input type="number" id="hnormal" placeholder="0" class="form-control">
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div> 
 
-                                        <label for="profesion">Profesión:</label>
-                                        <input type="text" name="" id="profesion" class="form-control">
+                                    </div> 
 
-                                        <label for="horario">Horario:</label>
-                                        <input type="text" name="" id="horario" class="form-control">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="card-box" style="background-color: #f1f5f7">
+                                                <h4 class="mt-0 mb-3 header-title">Cargas Retroactivas</h4>
 
-                                        <label for="select-sucursal">Sucursal:</label>
-                                        <select name="" id="select-sucursal" class="form-control">
-                                            <option>Seleccione Opción</option>
-                                            <option value="">PILLADO DE POLLOS</option>
-                                            <option value="">PILLADO DE VACAS</option>
-                                            <option value="">PILLADO DE MAMÁ DEL BENJA</option>
-                                        </select>
+                                                <div class="form-group row">
+                                                    <label class="col col-form-label" for="tcargas">Total Cargas:</label>
+                                                    <div class="col">
+                                                        <input type="number" id="tcargas" placeholder="0" class="form-control" disabled>
+                                                    </div>
 
-                                        <label for="select-centro">Centro Costo:</label>
-                                        <select name="" id="select-centro" class="form-control">
-                                            <option>Seleccione Opción</option>
-                                            <option value="">PILLADO DE POLLOS</option>
-                                            <option value="">PILLADO DE VACAS</option>
-                                            <option value="">PILLADO DE MAMÁ DEL BENJA</option>
-                                        </select>
+                                                    <label class="col col-form-label" for="csimples">Cargas Simples:</label>
+                                                    <div class="col">
+                                                        <input type="number" id="csimples" placeholder="0" class="form-control">
+                                                    </div>
 
-                                        <label for="zona">Asignar Zona (% Original):</label>
-                                        <div class="input-group">
-                                            <input type="number" name="" id="zona" class="form-control">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text" id="basic-addon1">%</span>
+                                                    <label class="col col-form-label" for="cinvalidez">Cargas Invalidez:</label>
+                                                    <div class="col">
+                                                        <input type="number" id="cinvalidez" placeholder="0" class="form-control">
+                                                    </div>
+
+                                                    <label class="col col-form-label" for="cmaternales">Cargas Maternales:</label>
+                                                    <div class="col">
+                                                        <input type="number" id="cmaternales" placeholder="0" class="form-control">
+                                                    </div>
+                                                </div>
+
                                             </div>
                                         </div>
-
-                                        <label for="">Incrementa Asignación de Zona Horaria</label> <input type="checkbox">
                                     </div>
-                                </div> 
-                            </div> 
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="card-box" style="background-color: #f1f5f7">
-                                        <h4 class="mt-0 mb-3 header-title">Gratificación</h4>
-
-                                        <label for="tipo" class="form-control">Tipo:</label>
-                                        <select name="" id="tipo" class="form-control">
-                                            <option>Seleccione Opción</option>
-                                            <option value="">Calculada</option>
-                                            <option value="">No Calculada</option>
-                                        </select>
-
-                                        <label for="monto">Monto:</label>
-                                        <input type="number" name="" id="monto" class="form-control">
-
-                                    </div>
-                                    
                                 </div>
-                                <div class="col-md-4">
-                                    <div class="card-box" style="background-color: #f1f5f7">
-                                        <h4 class="mt-0 mb-3 header-title">Caraterística Tributaria</h4>
-
-                                        <input type="checkbox" name="" id="impagri"> <label for="impagri">Impuesto Agrícola</label> <br>
-                                        <input type="checkbox" name="" id="arti"> <label for="arti">Artículo 61, Ley 18.768</label>
-                                    </div>
-                                    
+                                <div role="tabpanel" class="tab-pane fade" id="habydes">
+                                    <p class="mb-0">Food truck fixie locavore,
+                                    accusamus mcsweeney's marfa nulla single-origin coffee squid.
+                                    Exercitation +1 labore velit, blog sartorial PBR leggings next level
+                                    wes anderson artisan four loko farm-to-table craft beer twee. Qui
+                                    photo booth letterpress, commodo enim craft beer mlkshk aliquip jean
+                                    shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda
+                                    labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia
+                                    yr, vero magna velit sapiente labore stumptown. Vegan fanny pack
+                                    odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY
+                                    ethical culpa terry richardson biodiesel. Art party scenester
+                                    stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed
+                                    echo park.</p>
                                 </div>
-                                <div class="col-md-4">
-                                    <div class="card-box" style="background-color: #f1f5f7">
-                                        <h4 class="mt-0 mb-3 header-title">Seguro de Invalidez y Sobrevivencia</h4>
-
-                                        <input type="checkbox" name="" id="leysis"> <label for="impagri">No aplíca Ley SIS</label> <br>
-
-                                    </div>
+                                <div role="tabpanel" class="tab-pane fade" id="licenyperm">
+                                    <p class="mb-0">Etsy mixtape wayfarers, ethical
+                                        wes anderson tofu before they sold out mcsweeney's organic lomo
+                                        retro fanny pack lo-fi farm-to-table readymade. Messenger bag
+                                        gentrify pitchfork tattooed craft beer, iphone skateboard locavore
+                                        carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy
+                                        irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg
+                                        banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy
+                                        retro mlkshk vice blog. Scenester cred you probably haven't heard of
+                                        them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu
+                                        synth chambray yr.</p>
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="listado">
+                                    <p class="mb-0">Trust fund seitan letterpress,
+                                        keytar raw denim keffiyeh etsy art party before they sold out master
+                                        cleanse gluten-free squid scenester freegan cosby sweater. Fanny
+                                        pack portland seitan DIY, art party locavore wolf cliche high life
+                                        echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before
+                                        they sold out farm-to-table VHS viral locavore cosby sweater. Lomo
+                                        wolf viral, mustache readymade thundercats keffiyeh craft beer marfa
+                                        ethical. Wolf salvia freegan, sartorial keffiyeh echo park
+                                        vegan.</p>
+                                </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="movimientos">
+                                    <p class="mb-0">Trust fund seitan letterpress,
+                                        keytar raw denim keffiyeh etsy art party before they sold out master
+                                        cleanse gluten-free squid scenester freegan cosby sweater. Fanny
+                                        pack portland seitan DIY, art party locavore wolf cliche high life
+                                        echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before
+                                        they sold out farm-to-table VHS viral locavore cosby sweater. Lomo
+                                        wolf viral, mustache readymade thundercats keffiyeh craft beer marfa
+                                        ethical. Wolf salvia freegan, sartorial keffiyeh echo park
+                                        vegan.</p>
                                 </div>
                             </div>
+
+                            
                         </div>
-                    </div>
-                    <div role="tabpanel" class="tab-pane fade" id="d-previsional">
-                        <p class="mb-0">Pestaña 3.</p>
-                    </div>
-                    <div role="tabpanel" class="tab-pane fade" id="c-familiares">
-                        <p class="mb-0">Pestaña 4.</p>
-                    </div>
-                    <div role="tabpanel" class="tab-pane fade" id="observaciones">
-                        <p class="mb-0">Pestaña 5.</p>
+                        
+
                     </div>
                 </div>
             </div><!-- end col -->
