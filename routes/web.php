@@ -6,7 +6,15 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('draw1', function (){
-    return view('draw1');
+Route::get('draw2', function (){
+    return view('draw2');
+});
+
+Route::get('draw3', function (){
+    return view('draw3');
+});
+
+Route::get('draw4', function (){
+    return view('draw4');
 });
 
