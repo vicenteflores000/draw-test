@@ -15,7 +15,7 @@
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('css/icons.min.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('css/app.min.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('css/checkpoint.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('css/checkpoint.css') }}" rel="stylesheet" type="text/css" />
 </head>
 
 
@@ -437,6 +437,7 @@
 
                 </div>
 
+
                 <div class="row card-box" style="background-color: rgb(223, 223, 223)">
                     <div class="col-md-3">
                         <div class="card-box">
@@ -451,6 +452,37 @@
                                 </div>
                             </select>
                         </div>
+
+                        
+
+                        <div class="card-box">
+
+                            <h3>Cotización voluntaria</h3>
+                            <form>
+                                <input class="form-group" type="checkbox" id="proporcional" name="proporcional"
+                                    value="proporcional">
+                                <label for="proporcional"></label>Servicio Médico
+
+                                <input class="form_group" type="checkbox" id="proporcional" name="proporcional"
+                                    value="proporcional">
+                                <label for="proporcional"></label>Socio
+                            </form>
+                            <div class="form-group">
+                                <label for="rem"></label> C. Norm.
+                                <input type="number" class="form-control" id="rem">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="rem"></label> C. Esp.
+                                <input type="number" class="form-control" id="rem">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="rem"></label> Remuneración Cargas Esp.
+                                <input type="number" class="form-control" id="rem">
+                            </div>
+                        </div>
+
                         <div class="col-md-3">
                             <div class="card-box">
                                 <h2>Regimen de salud</h2>
@@ -541,10 +573,16 @@
                                             años</label>
                                     </div>
                                     <div>
-                                        <h3>Mes y año de vigencia</h3>
+                                        <h5>Mes y año de vigencia</h5>
                                         <input type="datetime-local">
+                                        <h5>Beneficios ley 19.966 </h5>
+                                        <input class="form_group" type="checkbox" id="proporcional" name="proporcional"
+                                            value="proporcional">
                                     </div>
                             </div>
+                        </div>
+                       
+                            
                         </div>
                     </div>
                 </div>
