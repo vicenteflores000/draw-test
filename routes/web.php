@@ -18,3 +18,6 @@ Route::get('draw4', function (){
     return view('draw4');
 });
 
+Route::get('draw5', function (){
+    return view('draw5');
+});
