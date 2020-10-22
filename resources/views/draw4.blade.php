@@ -14,6 +14,7 @@
         <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
         <link href="{{asset('css/icons.min.css')}}" rel="stylesheet" type="text/css" />
         <link href="{{asset('css/app.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset('css/checkpoint.css')}}" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
@@ -414,10 +415,10 @@
 
             <div class="col-xl-12">
                 
-                <div class="card-box" style="background-color: white">
+                <div class="card-box">
                     <div class="col-md-12">
 
-                        <div class="card-box" style="background-color: #f1f5f7"> <!-- 1ra Fila: Datos Empleado -->
+                        <div class="card-box"> <!-- 1ra Fila: Datos Empleado -->
                             <h4 class="mt-0 mb-3 header-title">Datos Personales</h4>
 
                             <form role="form">
@@ -427,7 +428,7 @@
                                         <div class="input-group">
                                             <input type="text" class="form-control" placeholder="ej: 12345678-9">
                                             <div class="input-group-append">
-                                                <button type="submit" class="btn btn-primary" id="botonimportar" style="background-color: #355d8e; border-color: #355d8e" >Importar</button>
+                                                <button type="submit" class="btn btn-sm btn-primary" id="botonimportar" >Importar</button>
                                             </div>
                                         </div>
                                     </div>
@@ -494,7 +495,7 @@
                                     <div class="row"> <!-- 2da Fila: Sueldo, Otros Antecedentes y Contratación -->
 
                                         <div class="col-md-4"> <!-- Días -->
-                                            <div class="card-box" style="background-color: #f1f5f7">
+                                            <div class="card-box">
                                                 <h4 class="mt-0 mb-3 header-title">Contratación</h4>
 
                                                 <div class="form-group row">
@@ -536,7 +537,7 @@
                                         </div> 
 
                                         <div class="col-md-3"> <!-- Hrs. Extray hrs. Descuento -->
-                                            <div class="card-box" style="background-color: #f1f5f7">
+                                            <div class="card-box">
                                                 <h4 class="mt-0 mb-3 header-title">Horas Extras</h4>
 
                                                 <div class="form-group row">
@@ -560,7 +561,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="card-box" style="background-color: #f1f5f7">
+                                            <div class="card-box">
                                                 <h4 class="mt-0 mb-3 header-title">Horas Descuento</h4>
                     
                                                 <div class="form-group row">
@@ -574,7 +575,7 @@
                                         </div> 
 
                                         <div class="col-md-5"> <!-- Otros y Otras rentas -->
-                                            <div class="card-box" style="background-color: #f1f5f7">
+                                            <div class="card-box">
                                                 <h4 class="mt-0 mb-3 header-title">Otros</h4>
                     
                                                 <div class="form-group row">
@@ -590,7 +591,7 @@
             
             
                                             </div>
-                                            <div class="card-box" style="background-color: #f1f5f7">
+                                            <div class="card-box">
                                                 <h4 class="mt-0 mb-3 header-title">Otras Rentas</h4>
                                                 
                                                 <div class="form-group row">
@@ -627,7 +628,7 @@
 
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <div class="card-box" style="background-color: #f1f5f7">
+                                            <div class="card-box">
                                                 <h4 class="mt-0 mb-3 header-title">Cargas Retroactivas</h4>
 
                                                 <div class="form-group row">

@@ -14,6 +14,7 @@
         <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
         <link href="{{asset('css/icons.min.css')}}" rel="stylesheet" type="text/css" />
         <link href="{{asset('css/app.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset('css/checkpoint.css')}}" rel="stylesheet" type="text/css" />
     </head>
 
     <body>
@@ -463,7 +464,7 @@
                                                 <div class="input-group">
                                                     <input type="text" class="form-control" placeholder="ej: 12345678-9">
                                                     <div class="input-group-append">
-                                                        <button type="submit" class="btn btn-primary" id="botonimportar" style="background-color: #355d8e; border-color: #355d8e" >Importar</button>
+                                                        <button type="submit" class="btn btn-sm" id="botonimportar" style="background-color: #355d8e; border-color: #355d8e" >Importar</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -479,30 +480,41 @@
                                         <div class="card-box" style="background-color: #f1f5f7">
                                             <h4 class="mt-0 mb-3 header-title">Sueldo</h4>
                                             
-                                            <label for="">Tipo:</label>
-                                            <select name="select-tipo" id="" class="form-control select">
-                                                <option>Seleccione Opción</option>
-                                                <option value="">Mensual</option>
-                                                <option value="">Anual</option>
-                                                <option value="">Semestral</option>
-                                                <option value="">Semanal</option>
-                                                <option value="">Diario</option>
-                                            </select>
+                                            <div class="form-group">
+                                                <label for="">Tipo:</label>
+                                                <select name="select-tipo" id="" class="form-control select">
+                                                    <option>Seleccione Opción</option>
+                                                    <option value="">Mensual</option>
+                                                    <option value="">Anual</option>
+                                                    <option value="">Semestral</option>
+                                                    <option value="">Semanal</option>
+                                                    <option value="">Diario</option>
+                                                </select>
+                                            </div>
+                                            
 
-                                            <label for="">Moneda:</label>
-                                            <select name="select-moneda" id="" class="form-control">
-                                                <option>Seleccione Opción</option>
-                                                <option value="">Peso</option>
-                                                <option value="">Dolares</option>
-                                                <option value="">Euros</option>
-                                                <option value="">Libras</option>
-                                            </select>
+                                            
 
-                                            <label for="">Día Cambio:</label>
-                                            <input type="number" placeholder="Ingrese Día" class="form-control">
+                                            <div class="form-group">
+                                                <label for="">Moneda:</label>
+                                                <select name="select-moneda" id="" class="form-control">
+                                                    <option>Seleccione Opción</option>
+                                                    <option value="">Peso</option>
+                                                    <option value="">Dolares</option>
+                                                    <option value="">Euros</option>
+                                                    <option value="">Libras</option>
+                                                </select>
+                                            </div>
 
-                                            <label for="">Monto:</label>
-                                            <input type="number" placeholder="Ingrese Monto" class="form-control">
+                                            <div class="form-group">
+                                                <label for="">Día Cambio:</label>
+                                                <input type="number" placeholder="Ingrese Día" class="form-control">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="">Monto:</label>
+                                                <input type="number" placeholder="Ingrese Monto" class="form-control">
+                                            </div>
 
                                             <input type="checkbox"> <label for="">No Calcula Ajuste Sueldo Base</label>
                                         </div>
