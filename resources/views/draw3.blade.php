@@ -411,7 +411,7 @@
     <div class="wrapper">
         <div class="container-fluid">
 
-            <!-- start page title -->
+            <!-- formularios -->
             <div class="col-xl-12">
                 <div class="row">
                     <div class="col-8">
@@ -421,6 +421,7 @@
                     </div>
                 </div>
                 <div class="row card-box" style="background-color: rgb(223, 223, 223)">
+
                     <div class="col-md-6">
                         <div class="card-box">
                             <label for="nombre">Nombres:</label><br>
@@ -433,53 +434,119 @@
                             <input type="text" id="rut" class="form-control" name="rut" placeholder="ej:222222-2">
                         </div>
                     </div>
+
                 </div>
 
-            </div>
-            <div class="row card-box" style="background-color: rgb(223, 223, 223)">
-
-                <div class="col-md-3 card-box">
-                    <div class="col-md-12">
+                <div class="row card-box" style="background-color: rgb(223, 223, 223)">
+                    <div class="col-md-3">
                         <div class="card-box">
                             <h3>Regimen Previsional</h3>
                             <select class="form-control">
                                 <option>A.F.P</option>
                                 <option>Capital</option>
                                 <option>Cuprum</option>
-                                <form>
+                                <div>
                                     <input type="checkbox" id="proporcional" name="proporcional" value="proporcional">
                                     <label for="proporcional">Proporcional</label>
-                                </form>
+                                </div>
                             </select>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-3 card-box">
-                    <div class="col-md-12">
-                        <div class="card-box">
-                            <h2>Regimen de salud</h2>
-                            <span for="inputState">Isapre</span>
-                            <select id="salud" class="form-control">
-                                <option selected>Fonasa</option>
-                                <option>xd</option>
-                            </select>
-                            <div>Modalidad
-                                <input type="number" placeholder="7" class="form-control">Tope de salud<br>
-                                <div class="form-check form-check-inline">
-
-                                    <input class="form-check-input" type="radio" name="ufactual" id="ufactual"
+                        <div class="col-md-3">
+                            <div class="card-box">
+                                <h2>Regimen de salud</h2>
+                                <div class="form-group">
+                                    <label for="rem"></label> Isapre
+                                    <select type="select" class="form-control" id="rem">
+                                        <option>Fonasa</option>
+                                        <option>Capital</option>
+                                        <option>Cuprum</option>
+                                    </select>
+                                    <div class="form-group">
+                                        <label for="rem"></label> Modalidad
+                                        <input type="number" class="form-control" id="rem" placeholder="7">
+                                    </div>
+                                </div>
+                                <div class="form-group form-check-inline">
+                                    <input class="form-group-input" type="radio" name="ufactual" id="ufactual"
                                         value="option1">
                                     <label class="form-check-label" for="inlineRadio1">U.F actual</label>
                                 </div>
-                                <div class="form-check form-check-inline">
+                                <div class="form-group form-check-inline">
                                     <input class="form-check-input" type="radio" name="ufactual" id="ufactual"
                                         value="option2">
                                     <label class="form-check-label" for="inlineRadio2">U.F antigua</label>
                                 </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card-box">
+
+                                <h3>Servicio médico. C.CH.C</h3>
+                                <form>
+                                    <input class="form-group" type="checkbox" id="proporcional" name="proporcional"
+                                        value="proporcional">
+                                    <label for="proporcional"></label>Servicio Médico
+
+                                    <input class="form_group" type="checkbox" id="proporcional" name="proporcional"
+                                        value="proporcional">
+                                    <label for="proporcional"></label>Socio
+                                </form>
+                                <div class="form-group">
+                                    <label for="rem"></label> C. Norm.
+                                    <input type="number" class="form-control" id="rem">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="rem"></label> C. Esp.
+                                    <input type="number" class="form-control" id="rem">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="rem"></label> Remuneración Cargas Esp.
+                                    <input type="number" class="form-control" id="rem">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-3">
+                            <div class="card-box">
+                                <h3>Tipo de trabajador</h3>
+                                <form>
+                                    <div class="form-group form-check-inline">
+
+                                        <input class="form-group-input" type="radio" name="ufactual" id="ufactual"
+                                            value="option1">
+                                        <label class="form-check-label" for="inlineRadio1">Activo (no
+                                            pensionado)</label>
+                                    </div>
+                                    <div class="form-group form-check-inline">
+                                        <input class="form-check-input" type="radio" name="ufactual" id="ufactual"
+                                            value="option2">
+                                        <label class="form-check-label" for="inlineRadio2">Pension y cotiza</label>
+                                    </div>
+                                    <div class="form-group form-check-inline">
+
+                                        <input class="form-group-input" type="radio" name="ufactual" id="ufactual"
+                                            value="option1">
+                                        <label class="form-check-label" for="inlineRadio1">Pension y no
+                                            cotiza</label>
+                                    </div>
+                                    <div class="form-group form-check-inline">
+
+                                        <input class="form-group-input" type="radio" name="ufactual" id="ufactual"
+                                            value="option1">
+                                        <label class="form-check-label" for="inlineRadio1">Activo >60 o 65
+                                            años</label>
+                                    </div>
+                                    <div>
+                                        <h3>Mes y año de vigencia</h3>
+                                        <input type="datetime-local">
+                                    </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 </body>
-<!-- end page title -->
