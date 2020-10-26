@@ -21,3 +21,7 @@ Route::get('draw4', function (){
 Route::get('draw5', function (){
     return view('draw5');
 });
+
+Route::get('draw6', function (){
+    return view('draw6');
+});
