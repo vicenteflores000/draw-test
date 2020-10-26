@@ -434,150 +434,330 @@
                             </div>
                         </div>
                     </div>
-    
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="card-box">
-                                <h3>Regimen Previsional</h3>
-                                <select name="afp" id="afp" class="form-control">
-                                    <option>A.F.P</option>
-                                    <option>Capital</option>
-                                    <option>Cuprum</option>
-                                </select>
-                                <div class="form-group">
-                                    <input type="checkbox" name="proporcional" id="proporcional">
-                                    <label for="proporcional">Proporcional</label>
+                    <div class="card-box">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="card-box">
+                                    <h4 class="mt-0 mb-3 header-title">Regimen Previsional</h4>
+                                    <div class="form-group">
+                                        <select name="afp" id="afp" class="form-control" id="regimen">
+                                            <option>A.F.P</option>
+                                            <option>Capital</option>
+                                            <option>Cuprum</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="checkbox" name="proporcional" id="proporcional">
+                                        <label for="proporcional">Proporcional</label>
+                                    </div>
+                                </div>
+                                <div class="card-box">
+                                    <h4 class="mt-0 mb-3 header-title">Tipo de trabajador</h4>
+                                    <form>
+                                        <div class="form-group">
+                                            <input class="form-group-input" type="radio" name="tipotrabajador"
+                                                id="tipotrabajador" value="option1">
+                                            <label class="form-check-label" for="tipotrabajador">Activo (no
+                                                pensionado)</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input class="form-group-input" type="radio" name="pension" id="pension"
+                                                value="option2">
+                                            <label class="form-check-label" for="pension">Pension y
+                                                cotiza</label>
+                                        </div>
+                                        <div class="form-group">
+
+                                            <input class="form-group-input" type="radio" name="pension" id="pension"
+                                                value="option1">
+                                            <label class="form-check-label" for="pension">Pension y no
+                                                cotiza</label>
+                                        </div>
+                                        <div class="form-group">
+
+                                            <input class="form-group-input" type="radio" name="activo" id="activo"
+                                                value="option1">
+                                            <label class="form-check-label" for="activo">Activo >60 o 65
+                                                años</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Mes y año de vigencia</label>
+                                            <input type="text" class="form-control" data-toggle="input-mask"
+                                                data-mask-format="00/00/0000" placeholder="Día/Mes/Año">
+                                            <span class="font-13 text-muted"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <input class="form_group" type="checkbox" id="ley" name="ley" value="ley">
+                                            <label for="proporcional">Beneficios ley 19.966</label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="card-box">
+                                    <h4 class="mt-0 mb-3 header-title">Trabajo Pesado</h4>
+                                    <form>
+                                        <div class="form-group">
+                                            <label>Monto</label>
+                                            <input type="text" class="form-control" data-toggle="input-mask"
+                                                data-mask-format="000.000.000.000.000,00" data-reverse="true"
+                                                placeholder="111.111.111">
+                                            <span class="font-13 text-muted"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="trabajo">Descr. Trabajo Pesado</label>
+                                            <textarea class="form-control" id="trabajo" rows="3"></textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="card-box">
+                                    <h4 class="mt-0 mb-3 header-title">Ley 19.010</h4>
+                                    <form>
+                                        <div class="form-group">
+                                            <input class="form-group" type="checkbox" id="Ley 19.010" name="Ley 19.010"
+                                                value="Ley 19.010">
+                                            <label for="proporcional">Beneficiado</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="rem"> Tasa% </label>
+                                            <input type="number" class="form-control" id="rem" placeholder="0">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Fecha Pacto</label>
+                                            <input type="text" class="form-control" data-toggle="input-mask"
+                                                data-mask-format="00/00/0000" placeholder="Día/Mes/Año">
+                                            <span class="font-13 text-muted"></span>
+                                        </div>
+                                        <label>A.F.P</label>
+                                        <select name="afp" id="afp" class="form-control">
+                                            <option>A.F.P</option>
+                                            <option>Capital</option>
+                                            <option>Cuprum</option>
+                                        </select>
+                                    </form>
                                 </div>
                             </div>
-    
-                            <div class="card-box">
-                                <h3>Tipo de trabajador</h3>
-                                <form>
-                                    <div class="form-group">
-                                        <input class="form-group-input" type="radio" name="ufactual" id="ufactual"
-                                            value="option1">
-                                        <label class="form-check-label" for="inlineRadio1">Activo (no
-                                            pensionado)</label>
-                                    </div>
-                                    <div class="form-group">
-                                        <input class="form-group-input" type="radio" name="ufactual" id="ufactual"
-                                            value="option2">
-                                        <label class="form-check-label" for="inlineRadio2">Pension y cotiza</label>
-                                    </div>
-                                    <div class="form-group">
-    
-                                        <input class="form-group-input" type="radio" name="ufactual" id="ufactual"
-                                            value="option1">
-                                        <label class="form-check-label" for="inlineRadio1">Pension y no
-                                            cotiza</label>
-                                    </div>
-                                    <div class="form-group">
-    
-                                        <input class="form-group-input" type="radio" name="ufactual" id="ufactual"
-                                            value="option1">
-                                        <label class="form-check-label" for="inlineRadio1">Activo >60 o 65
-                                            años</label>
-                                    </div>
-                                    <div class="form-group">
-                                        <h5>Mes y año de vigencia</h5>
-                                        <input type="datetime-local">
-                                    </div>
-                                    <div class="form-group">
-                                        <input class="form_group" type="checkbox" id="proporcional" name="proporcional"
-                                            value="proporcional">
-                                        <label for="proporcional">Beneficios ley 19.966</label>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="card-box">
-    
-                                <h3>Cotización voluntaria</h3>
-                                <form>
-                                    <div class="form-goup">
-                                        <input type="checkbox" id="proporcional" name="proporcional" value="proporcional">
-                                        <label for="proporcional">Servicio Médico</label>
-    
-                                        <input type="checkbox" id="proporcional" name="proporcional" value="proporcional">
-                                        <label for="proporcional">Socio</label>
-                                    </div>
-    
-                                    <div class="form-group">
-                                        <label for="rem"> C. Norm.</label>
-                                        <input type="number" class="form-control" id="rem">
-                                    </div>
-    
-                                    <div class="form-group">
-                                        <label for="rem"> C. Esp.</label>
-                                        <input type="number" class="form-control" id="rem">
-                                    </div>
-    
-                                    <div class="form-group">
-                                        <label for="rem"> Remuneración Cargas Esp.</label>
-                                        <input type="number" class="form-control" id="rem">
-                                    </div>
-    
-                                </form>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="card-box">
-                                <h2>Regimen de salud</h2>
-                                <div class="form-group">
-                                    <label for="rem"></label> Isapre
-                                    <select type="select" class="form-control" id="rem">
-                                        <option>Fonasa</option>
-                                        <option>Capital</option>
-                                        <option>Cuprum</option>
-                                    </select>
+                            <div class="col-md-3">
+                                <div class="card-box">
+                                    <h4 class="mt-0 mb-3 header-title">Cotización Pactada</h4>
+                                    <form>
+                                        <div class="form-group">
+                                            <input type="checkbox" name="Cotización-Pactada" id="Cotización-Pactada">
+                                            <label for="Cotización-Pactada">No Cotiza Salud</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Monto</label>
+                                            <input type="text" class="form-control" data-toggle="input-mask"
+                                                data-mask-format="000.000.000.000.000,00" data-reverse="true"
+                                                placeholder="111.111.111">
+                                            <span class="font-13 text-muted"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Monto U.F</label>
+                                            <input type="text" class="form-control" data-toggle="input-mask"
+                                                data-mask-format="000.000.000.000.000,00" data-reverse="true"
+                                                placeholder="111.111.111">
+                                            <span class="font-13 text-muted"></span>
+                                        </div>
+                                    </form>
                                 </div>
-                                <div class="form-group">
-                                    <label for="rem"></label> Modalidad
-                                    <input type="number" class="form-control" id="rem" placeholder="7">
+                                <div class="card-box">
+                                    <h4 class="mt-0 mb-3 header-title">Cta. Ahorro</h4>
+                                    <div class="form-group">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" data-toggle="input-mask"
+                                                data-mask-format="000.000.000.000.000,00" data-reverse="true"
+                                                placeholder="111.111.111">
+                                            <span class="font-13 text-muted"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="form-group">
+                                                <div class="form-group">
+                                                    <input class="form-group-input" type="radio" name="ufactual"
+                                                        id="ufactual" value="option2">
+                                                    <label class="form-check-label" for="inlineRadio2">P$</label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input class="form-group-input" type="radio" name="ufactual"
+                                                        id="ufactual" value="option2">
+                                                    <label class="form-check-label" for="inlineRadio2">%</label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input class="form-group-input" type="radio" name="ufactual"
+                                                        id="ufactual" value="option2">
+                                                    <label class="form-check-label" for="inlineRadio2">UF.</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <input type="radio" name="ufactual" id="ufactual" value="option1">
-                                    <label for="inlineRadio1">U.F actual</label>
-    
-                                    <input type="radio" name="ufactual" id="ufactual" value="option2">
-                                    <label for="inlineRadio2">U.F antigua</label>
+                                <div class="card-box">
+                                    <h4 class="mt-0 mb-3 header-title">Cotización voluntaria</h4>
+                                    <form>
+                                        <div class="form-group">
+                                            <div class="form-group">
+                                                <input class="form-group-input" type="radio" name="ufactual"
+                                                    id="ufactual" value="option2">
+                                                <label class="form-check-label" for="inlineRadio2">P$</label>
+                                            </div>
+                                            <div class="form-group">
+                                                <input class="form-group-input" type="radio" name="ufactual"
+                                                    id="ufactual" value="option2">
+                                                <label class="form-check-label" for="inlineRadio2">%</label>
+                                            </div>
+                                            <div class="form-group">
+                                                <input class="form-group-input" type="radio" name="ufactual"
+                                                    id="ufactual" value="option2">
+                                                <label class="form-check-label" for="inlineRadio2">UF.</label>
+                                            </div>
+                                            <input class="form-group" type="checkbox" id="proporcional"
+                                                name="proporcional" value="proporcional">
+                                            <label for="proporcional">Rebaja trib. Art.42 Bis.N°1</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Monto</label>
+                                            <input type="text" class="form-control" data-toggle="input-mask"
+                                                data-mask-format="000.000.000.000.000,00" data-reverse="true"
+                                                placeholder="111.111.111">
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="card-box">
-                                <h3>Servicio médico. C.CH.C</h3>
-                                <form>
+                            <div class="col-md-3">
+                                <div class="card-box">
+                                    <h4 class="mt-0 mb-3 header-title">Regimen de salud</h4>
                                     <div class="form-group">
-                                        <input class="form-group" type="checkbox" id="proporcional" name="proporcional"
-                                            value="proporcional">
-                                        <label for="proporcional"></label>Servicio Médico
-    
-                                        <input class="form_group" type="checkbox" id="proporcional" name="proporcional"
-                                            value="proporcional">
-                                        <label for="proporcional"></label>Socio
+                                        <label for="rem">Isapre</label>
+                                        <select type="select" class="form-control" id="rem">
+                                            <option>Fonasa</option>
+                                            <option>Capital</option>
+                                            <option>Cuprum</option>
+                                        </select>
                                     </div>
                                     <div class="form-group">
-                                        <label for="rem"></label> C. Norm.
-                                        <input type="number" class="form-control" id="rem">
+                                        <label for="rem">Modalidad</label>
+                                        <input type="number" class="form-control" id="Modalidad" placeholder="7">
                                     </div>
                                     <div class="form-group">
-                                        <label for="rem"></label> C. Esp.
-                                        <input type="number" class="form-control" id="rem">
+                                        <input type="radio" name="Modalidad" id="Modalidad" value="option1">
+                                        <label for="Modalidad">U.F actual</label>
                                     </div>
+                                    <div>
+                                        <input type="radio" name="Modalidad" id="Modalidad" value="option2">
+                                        <label for="Modalidad">U.F antigua</label>
+                                    </div>
+                                </div>
+                                <div class="card-box">
+                                    <h4 class="mt-0 mb-3 header-title">Adm. Cotización Voluntaria</h4>
                                     <div class="form-group">
-                                        <label for="rem"></label> Remuneración Cargas Esp.
-                                        <input type="number" class="form-control" id="rem">
+                                        <input type="radio" name="Modalidad" id="Modalidad" value="option1">
+                                        <label for="Modalidad">Otra Institución</label>
                                     </div>
-                                </form>
+                                    <div>
+                                        <input type="radio" name="Modalidad" id="Modalidad" value="option2">
+                                        <label for="Modalidad">A.F.P</label>
+                                    </div>
+                                    <div>
+                                        <select type="select" class="form-control" id="Voluntaria">
+                                            <option>Fonasa</option>
+                                            <option>Capital</option>
+                                            <option>Cuprum</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <button type="button" class="btn btn-secondary btn-sm waves-effect">Detalle Del
+                                            Cónyuge
+                                            Cotización
+                                            Voluntaria Adicional</button>
+                                    </div>
+                                </div>
+                                <div class="card-box">
+                                    <h4 class="mt-0 mb-3 header-title">Ahorro Previsional Voluntario</h4>
+                                    <div class="form-group">
+                                        <label for="Archivo"></label>
+                                        <input type="file" class="form-control-file" id="Archivo">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card-box">
+                                    <h4 class="mt-0 mb-3 header-title">Servicio médico. C.CH.C</h4>
+                                    <form>
+                                        <div class="form-group">
+                                            <input class="form-group" type="checkbox" id="medico" name="medico"
+                                                value="medico">
+                                            <label for="medico">Servicio Médico</label>
+
+                                            <input class="form_group" type="checkbox" id="Socio" name="Socio"
+                                                value="Socio">
+                                            <label for="Socio">Socio</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>C.Norm</label>
+                                            <input type="text" class="form-control" data-toggle="input-mask"
+                                                data-mask-format="000.000.000.000.000,00" data-reverse="true"
+                                                placeholder="111.111.111">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>C.Esp.</label>
+                                            <input type="text" class="form-control" data-toggle="input-mask"
+                                                data-mask-format="000.000.000.000.000,00" data-reverse="true"
+                                                placeholder="111.111.111">
+                                            <span class="font-13 text-muted"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Remuneración. Cargas Esp.</label>
+                                            <input type="text" class="form-control" data-toggle="input-mask"
+                                                data-mask-format="000.000.000.000.000,00" data-reverse="true"
+                                                placeholder="111.111.111">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="card-box">
+                                    <h4 class="mt-0 mb-3 header-title">Seguro De Cesantía</h4>
+                                    <form>
+                                        <div class="form-group">
+                                            <div class="form-group">
+                                                <input class="form-group" type="checkbox" id="Cesantía" name="Cesantía"
+                                                    value="Cesantía">
+                                                <label for="Cesantía">Seg. cesantía</label>
+
+                                                <input class="form_group" type="checkbox" id="Contrat" name="Contrat"
+                                                    value="Contrat">
+                                                <label for="Contrat">Contrat.Plazo/Obra</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Ingreso</label>
+                                            <input type="text" class="form-control" data-toggle="input-mask"
+                                                data-mask-format="00/00/0000" placeholder="Día/Mes/Año">
+                                            <span class="font-13 text-muted"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Ultima Cotización</label>
+                                            <input type="text" class="form-control" data-toggle="input-mask"
+                                                data-mask-format="00/00/0000" placeholder="Día/Mes/Año">
+                                            <span class="font-13 text-muted"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Termino De Contrato</label>
+                                            <input type="text" class="form-control" data-toggle="input-mask"
+                                                data-mask-format="00/00/0000" placeholder="Día/Mes/Año">
+                                            <span class="font-13 text-muted"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="rem">AFP. Seguro De Cesantía</label>
+                                            <select type="select" class="form-control" id="Cesantia">
+                                                <option>Capital</option>
+                                                <option>Fonasa</option>
+                                                <option>Cuprum</option>
+                                            </select>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
             </div>
         </div>
     </div>
-
 </body>
