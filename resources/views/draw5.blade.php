@@ -455,25 +455,25 @@
                                 <li class="nav-item">
                                     <a href="#s-mes" data-toggle="tab" aria-expanded="false" class="nav-link active">
                                         <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
-                                        <span class="d-none d-sm-block">Datos Personales</span>
+                                        <span class="d-none d-sm-block">Situación del Mes</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="#habydes" data-toggle="tab" aria-expanded="true" class="nav-link">
                                         <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
-                                        <span class="d-none d-sm-block">Datos Laborales</span>
+                                        <span class="d-none d-sm-block">Haberes/Descuentos</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="#licenyperm" data-toggle="tab" aria-expanded="false" class="nav-link">
                                         <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
-                                        <span class="d-none d-sm-block">Dato Previsional</span>
+                                        <span class="d-none d-sm-block">Licencias o Permisos</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="#listado" data-toggle="tab" aria-expanded="false" class="nav-link">
                                         <span class="d-block d-sm-none"><i class="fas fa-cog"></i></span>
-                                        <span class="d-none d-sm-block">Cargas Familiares</span>
+                                        <span class="d-none d-sm-block">Listado</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
@@ -501,222 +501,199 @@
                                 </div>
                                 <div role="tabpanel" class="tab-pane fade" id="habydes">
                                     <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="row">
-                                                <label class="col-sm-2  col-form-label" for="simpleinput">Número de
-                                                    Contacto</label>
-                                                <div class="col-sm-4">
-                                                    <input type="number" id="simpleinput" class="form-control"
-                                                        placeholder="0">
-                                                </div>
+                                        <div class="col-12">
+                                            <div class="card-box">
+                                                <h4 class="mt-0 mb-3 header-title">Asignación de Haberes y Descuentos
+                                                </h4>
 
-                                                <label class="col-sm-2  col-form-label" for="simpleinput">Fecha de
-                                                    Contrato</label>
-                                                <div class="col-sm-4">
-                                                    <input type="text" id="simpleinput" class="form-control datepicker"
-                                                        value="{{ date('d-m-Y') }}">
+                                                <div class="row">
+                                                    <div class="col-md-2">
+                                                        <div class="row">
+                                                            <div class="col-sm-12">
+                                                                <label for="">Código</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-sm-12">
+                                                                <div class="input-group">
+                                                                    <input type="text" class="form-control"
+                                                                        name="start" />
+                                                                    <input type="text" class="form-control"
+                                                                        name="end" />
+                                                                    <div class="input-group-append">
+                                                                        <button type="submit"
+                                                                            class="btn btn-sm btn-primary"
+                                                                            id="botonimportar">...</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <div class="row">
+                                                            <div class="col-sm-12">
+                                                                <label for="">Descripción</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row">
+                                                            <div class="col-sm-12">
+                                                                <input type="text" name="" id="" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="row">
+                                                            <div class="col-sm-12">
+                                                                <label for="">Valor</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-sm-12">
+                                                                <input type="text" name="" id="" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-1">
+                                                        <div class="row">
+                                                            <div class="col-sm-12">
+                                                                <label for="">Cantidad</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-sm-12">
+                                                                <input type="text" name="" id="" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-1">
+                                                        <div class="row">
+                                                            <div class="col-sm-12">
+                                                                <label for="">Ocurrencia</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-sm-12">
+                                                                <input type="text" name="" id="" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="row">
+                                                            <div class="col-sm-12">
+                                                                <label for="">Total</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-sm-12">
+                                                                <input type="text" name="" id="" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-1">
+                                                        <div class="row">
+                                                            <div class="col-sm-12">
+                                                                <button type="button"
+                                                                    class="btn btn-block btn-xs btn-purple"><i
+                                                                        class="far fa-file"></i></button>
+                                                                <button type="button"
+                                                                    class="btn btn-block btn-xs btn-purple"><i
+                                                                        class="fas fa-arrow-left"></i></button>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div> <br>
+                                    </div>
 
                                     <div class="row">
                                         <!-- 2da Fila: Sueldo, Otros Antecedentes y Contratación -->
 
-                                        <div class="col-md-4">
-                                            <!-- Días -->
-                                            <div class="card-box">
-                                                <h4 class="mt-0 mb-3 header-title">Contratación</h4>
-
-                                                <div class="form-group row">
-                                                    <label class="col-sm-3  col-form-label"
-                                                        for="dausentes">Ausentes:</label>
-                                                    <div class="col-sm-9">
-                                                        <input type="number" id="dausentes" class="form-control"
-                                                            placeholder="0">
-                                                    </div>
-                                                </div>
-
-                                                <div class="form-group row">
-                                                    <label class="col-sm-3  col-form-label" for="dnocontratados">No
-                                                        Contratados:</label>
-                                                    <div class="col-sm-9">
-                                                        <input type="number" id="dnocontratados" class="form-control"
-                                                            placeholder="0">
-                                                    </div>
-                                                </div>
-
-                                                <div class="form-group row">
-                                                    <label class="col-sm-3  col-form-label"
-                                                        for="dlicencia">Licencia:</label>
-                                                    <div class="col-sm-9">
-                                                        <input type="number" id="dlicencia" class="form-control"
-                                                            placeholder="0">
-                                                    </div>
-                                                </div>
-
-                                                <div class="form-group row">
-                                                    <label class="col-sm-3  col-form-label"
-                                                        for="dlocomocion">Locomoción:</label>
-                                                    <div class="col-sm-9">
-                                                        <input type="number" id="dlocomocion" class="form-control"
-                                                            placeholder="0">
-                                                    </div>
-                                                </div>
-
-                                                <div class="form-group row">
-                                                    <label class="col-sm-3  col-form-label"
-                                                        for="dcolacion">Colación:</label>
-                                                    <div class="col-sm-9">
-                                                        <input type="number" id="dcolacion" class="form-control"
-                                                            placeholder="0">
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-3">
-                                            <!-- Hrs. Extray hrs. Descuento -->
-                                            <div class="card-box">
-                                                <h4 class="mt-0 mb-3 header-title">Horas Extras</h4>
-
-                                                <div class="form-group row">
-                                                    <label class="col-sm-4 col-form-label" for="hnormal">Normal:</label>
-                                                    <div class="col-sm-8">
-                                                        <input type="number" id="hnormal" placeholder="0"
-                                                            class="form-control">
-                                                    </div>
-                                                </div>
-
-                                                <div class="form-group row">
-                                                    <label class="col-sm-4 col-form-label" for="hnoche">Noche:</label>
-                                                    <div class="col-sm-8">
-                                                        <input type="number" id="hnoche" placeholder="0"
-                                                            class="form-control">
-                                                    </div>
-                                                </div>
-
-                                                <div class="form-group row">
-                                                    <label class="col-sm-4 col-form-label"
-                                                        for="hfestivo">Festivo:</label>
-                                                    <div class="col-sm-8">
-                                                        <input type="number" id="hfestivo" placeholder="0"
-                                                            class="form-control">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="card-box">
-                                                <h4 class="mt-0 mb-3 header-title">Horas Descuento</h4>
-
-                                                <div class="form-group row">
-                                                    <label class="col-sm-4 col-form-label"
-                                                        for="hdescuento">Normal:</label>
-                                                    <div class="col-sm-8">
-                                                        <input type="number" id="hdescuento" placeholder="0"
-                                                            class="form-control">
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-5">
-                                            <!-- Otros y Otras rentas -->
-                                            <div class="card-box">
-                                                <h4 class="mt-0 mb-3 header-title">Otros</h4>
-
-                                                <div class="form-group row">
-                                                    <label class="col-sm-4 col-form-label" for="hnormal">Tipo Horas
-                                                        Extra:</label>
-                                                    <div class="col-sm-8">
-                                                        <select name="tipohorasextra" id="tipohorasextra"
-                                                            class="form-control">
-                                                            <option>Seleccione Opción</option>
-                                                            <option value="">Sueldo Base</option>
-                                                            <option value="">Sueldo Extra</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-
-
-                                            </div>
-                                            <div class="card-box">
-                                                <h4 class="mt-0 mb-3 header-title">Otras Rentas</h4>
-
-                                                <div class="form-group row">
-                                                    <label class="col-sm-3 col-form-label" for="orentas">Otras
-                                                        Rentas:</label>
-                                                    <div class="col-sm-3">
-                                                        <input type="number" id="orentas" placeholder="0"
-                                                            class="form-control">
-                                                    </div>
-
-                                                    <label class="col-sm-3 col-form-label" for="misapre">Monto
-                                                        Isapre:</label>
-                                                    <div class="col-sm-3">
-                                                        <input type="number" id="misapre" placeholder="0"
-                                                            class="form-control">
-                                                    </div>
-                                                </div>
-
-                                                <label for="">Banco:</label>
-                                                <select name="select-banco" id="" class="form-control">
-                                                    <option>Seleccione Opción</option>
-                                                    <option value="">Banco Estado</option>
-                                                    <option value="">Banco de Crédito e Inversiones</option>
-                                                    <option value="">Banco Carebeso</option>
-                                                </select>
-
-                                                <div class="form-group row">
-                                                    <label class="col-sm-12 col-form-label" for="hnormal">Monto Salud
-                                                        Descontado de la Base de Impuesto Único (en $):</label>
-                                                    <div class="col-sm-12">
-                                                        <input type="number" id="hnormal" placeholder="0"
-                                                            class="form-control">
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="row">
                                         <div class="col-md-12">
                                             <div class="card-box">
-                                                <h4 class="mt-0 mb-3 header-title">Cargas Retroactivas</h4>
-
-                                                <div class="form-group row">
-                                                    <label class="col col-form-label" for="tcargas">Total
-                                                        Cargas:</label>
-                                                    <div class="col">
-                                                        <input type="number" id="tcargas" placeholder="0"
-                                                            class="form-control" disabled>
-                                                    </div>
-
-                                                    <label class="col col-form-label" for="csimples">Cargas
-                                                        Simples:</label>
-                                                    <div class="col">
-                                                        <input type="number" id="csimples" placeholder="0"
-                                                            class="form-control">
-                                                    </div>
-
-                                                    <label class="col col-form-label" for="cinvalidez">Cargas
-                                                        Invalidez:</label>
-                                                    <div class="col">
-                                                        <input type="number" id="cinvalidez" placeholder="0"
-                                                            class="form-control">
-                                                    </div>
-
-                                                    <label class="col col-form-label" for="cmaternales">Cargas
-                                                        Maternales:</label>
-                                                    <div class="col">
-                                                        <input type="number" id="cmaternales" placeholder="0"
-                                                            class="form-control">
-                                                    </div>
-                                                </div>
-
+                                                <div class="table-responsive">
+                                                    <table class="table table-striped mb-0">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Tipo</th>
+                                                                <th>Codigo</th>
+                                                                <th>Descripción</th>
+                                                                <th>Valor</th>
+                                                                <th>Cantidad</th>
+                                                                <th>Ocurrencia</th>
+                                                                <th>Haberes</th>
+                                                                <th>Descuentos</th>
+                                                                <th>Acción</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>D</td>
+                                                                <td>1</td>
+                                                                <td>ANTICIPO DE QUINCENA</td>
+                                                                <td>250000</td>
+                                                                <td>1</td>
+                                                                <td>1</td>
+                                                                <td>0</td>
+                                                                <td>250000</td>
+                                                                <td>
+                                                                    <div class="btn-group mt-1">
+                                                                        <button type="button"
+                                                                            class="btn btn-primary btn-xs dropdown-toggle waves-effec"
+                                                                            data-toggle="dropdown"
+                                                                            aria-expanded="false">Opciones <i
+                                                                                class="mdi mdi-chevron-down"></i></button>
+                                                                        <div class="dropdown-menu">
+                                                                            <!-- item-->
+                                                                            <a href="javascript:void(0);"
+                                                                                class="dropdown-item text-black-"><i
+                                                                                    class="fas fa-edit"></i> Editar</a>
+                                                                            <!-- item-->
+                                                                            <a href="javascript:void(0);"
+                                                                                class="dropdown-item text-danger"><i
+                                                                                    class="fas fa-trash"></i>
+                                                                                Eliminar</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>D</td>
+                                                                <td>12</td>
+                                                                <td>PRESTAMO CCAF LOS ANDES</td>
+                                                                <td>49570</td>
+                                                                <td>1</td>
+                                                                <td>1</td>
+                                                                <td>0</td>
+                                                                <td>49570</td>
+                                                                <td>
+                                                                    <div class="btn-group mt-1">
+                                                                        <button type="button"
+                                                                            class="btn btn-primary btn-xs dropdown-toggle waves-effec"
+                                                                            data-toggle="dropdown"
+                                                                            aria-expanded="false">Opciones <i
+                                                                                class="mdi mdi-chevron-down"></i></button>
+                                                                        <div class="dropdown-menu">
+                                                                            <!-- item-->
+                                                                            <a href="javascript:void(0);"
+                                                                                class="dropdown-item text-black-"><i
+                                                                                    class="fas fa-edit"></i> Editar</a>
+                                                                            <!-- item-->
+                                                                            <a href="javascript:void(0);"
+                                                                                class="dropdown-item text-danger"><i
+                                                                                    class="fas fa-trash"></i>
+                                                                                Eliminar</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div> <br>
+                                                <button class="btn btn-icon waves-effect waves-light btn-danger"> <i
+                                                        class="fas fa-times"></i> </button>
                                             </div>
                                         </div>
                                     </div>

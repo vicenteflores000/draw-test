@@ -455,25 +455,25 @@
                                 <li class="nav-item">
                                     <a href="#s-mes" data-toggle="tab" aria-expanded="false" class="nav-link active">
                                         <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
-                                        <span class="d-none d-sm-block">Datos Personales</span>
+                                        <span class="d-none d-sm-block">Situación del Mes</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="#habydes" data-toggle="tab" aria-expanded="true" class="nav-link">
                                         <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
-                                        <span class="d-none d-sm-block">Datos Laborales</span>
+                                        <span class="d-none d-sm-block">Haberes/Descuentos</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="#licenyperm" data-toggle="tab" aria-expanded="false" class="nav-link">
                                         <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
-                                        <span class="d-none d-sm-block">Dato Previsional</span>
+                                        <span class="d-none d-sm-block">Licencias o Permisos</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="#listado" data-toggle="tab" aria-expanded="false" class="nav-link">
                                         <span class="d-block d-sm-none"><i class="fas fa-cog"></i></span>
-                                        <span class="d-none d-sm-block">Cargas Familiares</span>
+                                        <span class="d-none d-sm-block">Listado</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
@@ -744,24 +744,23 @@
                                         ethical. Wolf salvia freegan, sartorial keffiyeh echo park
                                         vegan.</p>
                                 </div>
+                                <div role="tabpanel" class="tab-pane fade" id="movimientos">
+                                    <p class="mb-0">Trust fund seitan letterpress,
+                                        keytar raw denim keffiyeh etsy art party before they sold out master
+                                        cleanse gluten-free squid scenester freegan cosby sweater. Fanny
+                                        pack portland seitan DIY, art party locavore wolf cliche high life
+                                        echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before
+                                        they sold out farm-to-table VHS viral locavore cosby sweater. Lomo
+                                        wolf viral, mustache readymade thundercats keffiyeh craft beer marfa
+                                        ethical. Wolf salvia freegan, sartorial keffiyeh echo park
+                                        vegan.</p>
+                                </div>
                             </div>
-                            <div role="tabpanel" class="tab-pane fade" id="movimientos">
-                                <p class="mb-0">Trust fund seitan letterpress,
-                                    keytar raw denim keffiyeh etsy art party before they sold out master
-                                    cleanse gluten-free squid scenester freegan cosby sweater. Fanny
-                                    pack portland seitan DIY, art party locavore wolf cliche high life
-                                    echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before
-                                    they sold out farm-to-table VHS viral locavore cosby sweater. Lomo
-                                    wolf viral, mustache readymade thundercats keffiyeh craft beer marfa
-                                    ethical. Wolf salvia freegan, sartorial keffiyeh echo park
-                                    vegan.</p>
-                            </div>
+
                         </div>
 
 
                     </div>
-
-
                 </div>
             </div>
         </div><!-- end col -->
