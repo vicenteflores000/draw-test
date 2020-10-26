@@ -419,160 +419,163 @@
             </div>
 
             <div class="col-xl-12">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="card-box">
-                            <label for="nombre">Nombres:</label><br>
-                            <input type="text" id="nombre" class="form-control" name="nombre" disabled>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card-box">
-                            <label for="rut">Rut:</label><br>
-                            <input type="text" id="rut" class="form-control" name="rut" placeholder="ej:222222-2">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="card-box">
-                            <h3>Regimen Previsional</h3>
-                            <select name="afp" id="afp" class="form-control">
-                                <option>A.F.P</option>
-                                <option>Capital</option>
-                                <option>Cuprum</option>
-                            </select>
-                            <div class="form-group">
-                                <input type="checkbox" name="proporcional" id="proporcional">
-                                <label for="proporcional">Proporcional</label>
+                <div class="card-box">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card-box">
+                                <label for="nombre">Nombres:</label><br>
+                                <input type="text" id="nombre" class="form-control" name="nombre" disabled>
                             </div>
                         </div>
-
-                        <div class="card-box">
-                            <h3>Tipo de trabajador</h3>
-                            <form>
-                                <div class="form-group">
-                                    <input class="form-group-input" type="radio" name="ufactual" id="ufactual"
-                                        value="option1">
-                                    <label class="form-check-label" for="inlineRadio1">Activo (no
-                                        pensionado)</label>
-                                </div>
-                                <div class="form-group">
-                                    <input class="form-group-input" type="radio" name="ufactual" id="ufactual"
-                                        value="option2">
-                                    <label class="form-check-label" for="inlineRadio2">Pension y cotiza</label>
-                                </div>
-                                <div class="form-group">
-
-                                    <input class="form-group-input" type="radio" name="ufactual" id="ufactual"
-                                        value="option1">
-                                    <label class="form-check-label" for="inlineRadio1">Pension y no
-                                        cotiza</label>
-                                </div>
-                                <div class="form-group">
-
-                                    <input class="form-group-input" type="radio" name="ufactual" id="ufactual"
-                                        value="option1">
-                                    <label class="form-check-label" for="inlineRadio1">Activo >60 o 65
-                                        años</label>
-                                </div>
-                                <div class="form-group">
-                                    <h5>Mes y año de vigencia</h5>
-                                    <input type="datetime-local">
-                                </div>
-                                <div class="form-group">
-                                    <input class="form_group" type="checkbox" id="proporcional" name="proporcional"
-                                        value="proporcional">
-                                    <label for="proporcional">Beneficios ley 19.966</label>
-                                </div>
-                            </form>
+                        <div class="col-md-6">
+                            <div class="card-box">
+                                <label for="rut">Rut:</label><br>
+                                <input type="text" id="rut" class="form-control" name="rut" placeholder="ej:222222-2">
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="card-box">
-
-                            <h3>Cotización voluntaria</h3>
-                            <form>
-                                <div class="form-goup">
-                                    <input type="checkbox" id="proporcional" name="proporcional" value="proporcional">
-                                    <label for="proporcional">Servicio Médico</label>
-
-                                    <input type="checkbox" id="proporcional" name="proporcional" value="proporcional">
-                                    <label for="proporcional">Socio</label>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="rem"> C. Norm.</label>
-                                    <input type="number" class="form-control" id="rem">
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="rem"> C. Esp.</label>
-                                    <input type="number" class="form-control" id="rem">
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="rem"> Remuneración Cargas Esp.</label>
-                                    <input type="number" class="form-control" id="rem">
-                                </div>
-
-                            </form>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card-box">
-                            <h2>Regimen de salud</h2>
-                            <div class="form-group">
-                                <label for="rem"></label> Isapre
-                                <select type="select" class="form-control" id="rem">
-                                    <option>Fonasa</option>
+    
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="card-box">
+                                <h3>Regimen Previsional</h3>
+                                <select name="afp" id="afp" class="form-control">
+                                    <option>A.F.P</option>
                                     <option>Capital</option>
                                     <option>Cuprum</option>
                                 </select>
+                                <div class="form-group">
+                                    <input type="checkbox" name="proporcional" id="proporcional">
+                                    <label for="proporcional">Proporcional</label>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label for="rem"></label> Modalidad
-                                <input type="number" class="form-control" id="rem" placeholder="7">
-                            </div>
-                            <div class="form-group">
-                                <input type="radio" name="ufactual" id="ufactual" value="option1">
-                                <label for="inlineRadio1">U.F actual</label>
-
-                                <input type="radio" name="ufactual" id="ufactual" value="option2">
-                                <label for="inlineRadio2">U.F antigua</label>
+    
+                            <div class="card-box">
+                                <h3>Tipo de trabajador</h3>
+                                <form>
+                                    <div class="form-group">
+                                        <input class="form-group-input" type="radio" name="ufactual" id="ufactual"
+                                            value="option1">
+                                        <label class="form-check-label" for="inlineRadio1">Activo (no
+                                            pensionado)</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-group-input" type="radio" name="ufactual" id="ufactual"
+                                            value="option2">
+                                        <label class="form-check-label" for="inlineRadio2">Pension y cotiza</label>
+                                    </div>
+                                    <div class="form-group">
+    
+                                        <input class="form-group-input" type="radio" name="ufactual" id="ufactual"
+                                            value="option1">
+                                        <label class="form-check-label" for="inlineRadio1">Pension y no
+                                            cotiza</label>
+                                    </div>
+                                    <div class="form-group">
+    
+                                        <input class="form-group-input" type="radio" name="ufactual" id="ufactual"
+                                            value="option1">
+                                        <label class="form-check-label" for="inlineRadio1">Activo >60 o 65
+                                            años</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <h5>Mes y año de vigencia</h5>
+                                        <input type="datetime-local">
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form_group" type="checkbox" id="proporcional" name="proporcional"
+                                            value="proporcional">
+                                        <label for="proporcional">Beneficios ley 19.966</label>
+                                    </div>
+                                </form>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card-box">
-                            <h3>Servicio médico. C.CH.C</h3>
-                            <form>
+                        <div class="col-md-3">
+                            <div class="card-box">
+    
+                                <h3>Cotización voluntaria</h3>
+                                <form>
+                                    <div class="form-goup">
+                                        <input type="checkbox" id="proporcional" name="proporcional" value="proporcional">
+                                        <label for="proporcional">Servicio Médico</label>
+    
+                                        <input type="checkbox" id="proporcional" name="proporcional" value="proporcional">
+                                        <label for="proporcional">Socio</label>
+                                    </div>
+    
+                                    <div class="form-group">
+                                        <label for="rem"> C. Norm.</label>
+                                        <input type="number" class="form-control" id="rem">
+                                    </div>
+    
+                                    <div class="form-group">
+                                        <label for="rem"> C. Esp.</label>
+                                        <input type="number" class="form-control" id="rem">
+                                    </div>
+    
+                                    <div class="form-group">
+                                        <label for="rem"> Remuneración Cargas Esp.</label>
+                                        <input type="number" class="form-control" id="rem">
+                                    </div>
+    
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card-box">
+                                <h2>Regimen de salud</h2>
                                 <div class="form-group">
-                                    <input class="form-group" type="checkbox" id="proporcional" name="proporcional"
-                                        value="proporcional">
-                                    <label for="proporcional"></label>Servicio Médico
-
-                                    <input class="form_group" type="checkbox" id="proporcional" name="proporcional"
-                                        value="proporcional">
-                                    <label for="proporcional"></label>Socio
+                                    <label for="rem"></label> Isapre
+                                    <select type="select" class="form-control" id="rem">
+                                        <option>Fonasa</option>
+                                        <option>Capital</option>
+                                        <option>Cuprum</option>
+                                    </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="rem"></label> C. Norm.
-                                    <input type="number" class="form-control" id="rem">
+                                    <label for="rem"></label> Modalidad
+                                    <input type="number" class="form-control" id="rem" placeholder="7">
                                 </div>
                                 <div class="form-group">
-                                    <label for="rem"></label> C. Esp.
-                                    <input type="number" class="form-control" id="rem">
+                                    <input type="radio" name="ufactual" id="ufactual" value="option1">
+                                    <label for="inlineRadio1">U.F actual</label>
+    
+                                    <input type="radio" name="ufactual" id="ufactual" value="option2">
+                                    <label for="inlineRadio2">U.F antigua</label>
                                 </div>
-                                <div class="form-group">
-                                    <label for="rem"></label> Remuneración Cargas Esp.
-                                    <input type="number" class="form-control" id="rem">
-                                </div>
-                            </form>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card-box">
+                                <h3>Servicio médico. C.CH.C</h3>
+                                <form>
+                                    <div class="form-group">
+                                        <input class="form-group" type="checkbox" id="proporcional" name="proporcional"
+                                            value="proporcional">
+                                        <label for="proporcional"></label>Servicio Médico
+    
+                                        <input class="form_group" type="checkbox" id="proporcional" name="proporcional"
+                                            value="proporcional">
+                                        <label for="proporcional"></label>Socio
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="rem"></label> C. Norm.
+                                        <input type="number" class="form-control" id="rem">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="rem"></label> C. Esp.
+                                        <input type="number" class="form-control" id="rem">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="rem"></label> Remuneración Cargas Esp.
+                                        <input type="number" class="form-control" id="rem">
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
+                
             </div>
         </div>
     </div>
