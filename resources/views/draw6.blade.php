@@ -1,8 +1,8 @@
-<!DOCTYPE html> <!-- Situación del Mes -->
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
     <title>Movimiento Mensual de Empleados</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
@@ -19,11 +19,7 @@
 </head>
 
 <body>
-
-    <!-- Navigation Bar-->
     <header id="topnav">
-
-        <!-- Topbar Start -->
         <div class="navbar-custom" style="background-color: #355d8e">
             <div class="container-fluid">
                 <ul class="list-unstyled topnav-menu float-right mb-0">
@@ -116,7 +112,6 @@
 
             </div> <!-- end container-fluid-->
         </div>
-        <!-- end Topbar -->
 
         <div class="topbar-menu">
             <div class="container-fluid">
@@ -399,19 +394,10 @@
             </div>
             <!-- end container -->
         </div>
-        <!-- end navbar-custom -->
-
     </header>
-    <!-- End Navigation Bar-->
-
-    <!-- ============================================================== -->
-    <!-- Start Page Content here -->
-    <!-- ============================================================== -->
 
     <div class="wrapper">
         <div class="container-fluid">
-
-            <!-- start page title -->
             <div class="row">
                 <div class="col-12">
                     <div class="page-title-box">
@@ -419,13 +405,10 @@
                     </div>
                 </div>
             </div>
-            <!-- end page title -->
 
             <div class="col-xl-12">
-
                 <div class="card-box">
                     <div class="col-md-12">
-
                         <div class="card-box">
                             <!-- 1ra Fila: Datos Empleado -->
                             <h4 class="mt-0 mb-3 header-title">Datos Personales</h4>
@@ -453,7 +436,7 @@
                         <div class="col-md-12">
                             <ul class="nav nav-tabs nav-justified">
                                 <li class="nav-item">
-                                    <a href="#s-mes" data-toggle="tab" aria-expanded="false" class="nav-link active">
+                                    <a href="#s-mes" data-toggle="tab" aria-expanded="false" class="nav-link">
                                         <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
                                         <span class="d-none d-sm-block">Situación del Mes</span>
                                     </a>
@@ -465,7 +448,8 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#licenyperm" data-toggle="tab" aria-expanded="false" class="nav-link">
+                                    <a href="#licenyperm" data-toggle="tab" aria-expanded="false"
+                                        class="nav-link active">
                                         <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
                                         <span class="d-none d-sm-block">Licencias o Permisos</span>
                                     </a>
@@ -500,205 +484,6 @@
                                         echo park.</p>
                                 </div>
                                 <div role="tabpanel" class="tab-pane fade" id="habydes">
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div class="card-box">
-                                                <h4 class="mt-0 mb-3 header-title">Asignación de Haberes y Descuentos
-                                                </h4>
-
-                                                <div class="row">
-                                                    <div class="col-md-2">
-                                                        <div class="row">
-                                                            <div class="col-sm-12">
-                                                                <label for="">Código</label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-sm-12">
-                                                                <div class="input-group">
-                                                                    <input type="text" class="form-control"
-                                                                        name="start" />
-                                                                    <input type="text" class="form-control"
-                                                                        name="end" />
-                                                                    <div class="input-group-append">
-                                                                        <button type="submit"
-                                                                            class="btn btn-sm btn-primary"
-                                                                            id="botonimportar">...</button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <div class="row">
-                                                            <div class="col-sm-12">
-                                                                <label for="">Descripción</label>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="row">
-                                                            <div class="col-sm-12">
-                                                                <input type="text" name="" id="" class="form-control">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <div class="row">
-                                                            <div class="col-sm-12">
-                                                                <label for="">Valor</label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-sm-12">
-                                                                <input type="text" name="" id="" class="form-control">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-1">
-                                                        <div class="row">
-                                                            <div class="col-sm-12">
-                                                                <label for="">Cantidad</label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-sm-12">
-                                                                <input type="text" name="" id="" class="form-control">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-1">
-                                                        <div class="row">
-                                                            <div class="col-sm-12">
-                                                                <label for="">Ocurrencia</label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-sm-12">
-                                                                <input type="text" name="" id="" class="form-control">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <div class="row">
-                                                            <div class="col-sm-12">
-                                                                <label for="">Total</label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-sm-12">
-                                                                <input type="text" name="" id="" class="form-control">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-1">
-                                                        <div class="row">
-                                                            <div class="col-sm-12">
-                                                                <button type="button"
-                                                                    class="btn btn-block btn-xs btn-purple"><i
-                                                                        class="far fa-file"></i></button>
-                                                                <button type="button"
-                                                                    class="btn btn-block btn-xs btn-purple"><i
-                                                                        class="fas fa-arrow-left"></i></button>
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <!-- 2da Fila: Sueldo, Otros Antecedentes y Contratación -->
-
-                                        <div class="col-md-12">
-                                            <div class="card-box">
-                                                <div class="table-responsive">
-                                                    <table class="table table-striped mb-0">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>Tipo</th>
-                                                                <th>Codigo</th>
-                                                                <th>Descripción</th>
-                                                                <th>Valor</th>
-                                                                <th>Cantidad</th>
-                                                                <th>Ocurrencia</th>
-                                                                <th>Haberes</th>
-                                                                <th>Descuentos</th>
-                                                                <th>Acción</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>D</td>
-                                                                <td>1</td>
-                                                                <td>ANTICIPO DE QUINCENA</td>
-                                                                <td>250000</td>
-                                                                <td>1</td>
-                                                                <td>1</td>
-                                                                <td>0</td>
-                                                                <td>250000</td>
-                                                                <td>
-                                                                    <div class="btn-group mt-1">
-                                                                        <button type="button"
-                                                                            class="btn btn-primary btn-xs dropdown-toggle waves-effec"
-                                                                            data-toggle="dropdown"
-                                                                            aria-expanded="false">Opciones <i
-                                                                                class="mdi mdi-chevron-down"></i></button>
-                                                                        <div class="dropdown-menu">
-                                                                            <!-- item-->
-                                                                            <a href="javascript:void(0);"
-                                                                                class="dropdown-item text-black-"><i
-                                                                                    class="fas fa-edit"></i> Editar</a>
-                                                                            <!-- item-->
-                                                                            <a href="javascript:void(0);"
-                                                                                class="dropdown-item text-danger"><i
-                                                                                    class="fas fa-trash"></i>
-                                                                                Eliminar</a>
-                                                                        </div>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>D</td>
-                                                                <td>12</td>
-                                                                <td>PRESTAMO CCAF LOS ANDES</td>
-                                                                <td>49570</td>
-                                                                <td>1</td>
-                                                                <td>1</td>
-                                                                <td>0</td>
-                                                                <td>49570</td>
-                                                                <td>
-                                                                    <div class="btn-group mt-1">
-                                                                        <button type="button"
-                                                                            class="btn btn-primary btn-xs dropdown-toggle waves-effec"
-                                                                            data-toggle="dropdown"
-                                                                            aria-expanded="false">Opciones <i
-                                                                                class="mdi mdi-chevron-down"></i></button>
-                                                                        <div class="dropdown-menu">
-                                                                            <!-- item-->
-                                                                            <a href="javascript:void(0);"
-                                                                                class="dropdown-item text-black-"><i
-                                                                                    class="fas fa-edit"></i> Editar</a>
-                                                                            <!-- item-->
-                                                                            <a href="javascript:void(0);"
-                                                                                class="dropdown-item text-danger"><i
-                                                                                    class="fas fa-trash"></i>
-                                                                                Eliminar</a>
-                                                                        </div>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div> <br>
-                                                <button class="btn btn-icon waves-effect waves-light btn-danger"> <i
-                                                        class="fas fa-times"></i> </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div role="tabpanel" class="tab-pane fade" id="licenyperm">
                                     <p class="mb-0">Etsy mixtape wayfarers, ethical
                                         wes anderson tofu before they sold out mcsweeney's organic lomo
                                         retro fanny pack lo-fi farm-to-table readymade. Messenger bag
@@ -709,6 +494,86 @@
                                         retro mlkshk vice blog. Scenester cred you probably haven't heard of
                                         them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu
                                         synth chambray yr.</p>
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="licenyperm">
+                                    <div class="col-md-12">
+                                        <div class="card-box">
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <h4 class="mt-0 mb-3 header-title">Licencia o Permiso Sin Goce de
+                                                        Sueldo
+                                                    </h4>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-sm-5">
+                                                    <div class="card-box">
+                                                        <h4 class="mt-0 mb-3 header-title">Entidad Pagadora de la Asignación Familiar</h4>
+                                                        <input type="radio" name="ent" id="ccaf"> <label for="ccaf">C.C.A.F.</label>
+                                                        <input type="radio" name="ent" id="empresa"> <label for="empresa">Empresa</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="card-box">
+                                                        <h4 class="mt-0 mb-3 header-title">RUT</h4>
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control"
+                                                                name="start" placeholder="12345678"/> <h5>-</h5>
+                                                            <input type="text" class="form-control"
+                                                                name="end" placeholder="9"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="card-box">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input"
+                                                                id="customCheck1">
+                                                            <label class="custom-control-label" for="customCheck1">Pago de
+                                                                Días Trabajados en Base a Días Calendario</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <div class="card-box">
+                                                        <h4 class="mt-0 mb-3 header-title">Monto Subsidio ($)</h4>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="card-box">
+                                                        <h4 class="mt-0 mb-3 header-title">Monto Imponible Mes Anterior ($)</h4>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="card-box">
+                                                        <h4 class="mt-0 mb-3 header-title">Base Imponible Licencia Médica ($)</h4>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="card-box">
+                                                        <h4 class="mt-0 mb-3 header-title">Base Imponible Licencia Médica Seguro Cesantía ($)</h4>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="card-box">
+                                                        <h4 class="mt-0 mb-3 header-title">Base Imponible Mes Anterior Ley SIS / SANNA ($)</h4>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div role="tabpanel" class="tab-pane fade" id="listado">
                                     <p class="mb-0">Trust fund seitan letterpress,
@@ -734,28 +599,15 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
-            </div><!-- end col -->
-
-        </div> <!-- end container -->
+            </div>
+        </div>
     </div>
-    <!-- end wrapper -->
 
-    <!-- ============================================================== -->
-    <!-- End Page content -->
-    <!-- ============================================================== -->
-
-    <!-- Right bar overlay-->
     <div class="rightbar-overlay"></div>
-
-    <!-- Vendor js -->
     <script src="{{ asset('js/vendor.min.js') }}"></script>
-
-    <!-- App js-->
     <script src="{{ asset('js/app.min.js') }}"></script>
-
 </body>
 
 </html>
