@@ -1,4 +1,4 @@
-//! moment.js
+ //! moment.js
 
 ;(function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
@@ -3613,7 +3613,7 @@
         return {
             input: this._i,
             format: this._f,
-            locale: this._locale,
+            locale: 'this._locale',
             isUTC: this._isUTC,
             strict: this._strict
         };

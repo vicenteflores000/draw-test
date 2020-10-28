@@ -11,7 +11,7 @@
         <link rel="shortcut icon" href="{{asset('images/favicon.ico')}}">
 
         <!-- App css -->
-        <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
+            <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
         <link href="{{asset('css/icons.min.css')}}" rel="stylesheet" type="text/css" />
         <link href="{{asset('css/app.min.css')}}" rel="stylesheet" type="text/css" />
         <link href="{{asset('css/checkpoint.css')}}" rel="stylesheet" type="text/css" />
@@ -32,7 +32,6 @@
                                 <i class="fe-bell noti-icon"></i>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right dropdown-lg">
-    
                                 <!-- item-->
                                 <div class="dropdown-item noti-title">
                                     <h5 class="m-0">
@@ -43,20 +42,18 @@
                                         </span>Notification
                                     </h5>
                                 </div>
-    
                                 <!-- All-->
                                 <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
                                     View all
                                     <i class="fi-arrow-right"></i>
                                 </a>
-    
                             </div>
                         </li>
     
                         <li class="dropdown notification-list">
                             <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                                 <span class="pro-user-name ml-1">
-                                    Nowak <i class="mdi mdi-chevron-down"></i> 
+                                    Nowak <i class="mdi mdi-chevron-down"></i>
                                 </span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
@@ -411,39 +408,39 @@
                             <h4 class="page-title"> <i class="mdi mdi-account"></i> Mantención de Trabajadores</h4>
                         </div>
                     </div>
-                </div>     
-                <!-- end page title --> 
+                </div>
+                <!-- end page title -->
 
                 <div class="col-xl-12">
                     <ul class="nav nav-tabs nav-justified">
                         <li class="nav-item">
                             <a href="#d-personales" data-toggle="tab" aria-expanded="false" class="nav-link active">
                                 <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
-                                <span class="d-none d-sm-block">Datos Personales</span>            
+                                <span class="d-none d-sm-block">Datos Personales</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="#d-laborales" data-toggle="tab" aria-expanded="true" class="nav-link">
                                 <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
-                                <span class="d-none d-sm-block">Datos Laborales</span> 
+                                <span class="d-none d-sm-block">Datos Laborales</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="#d-previsional" data-toggle="tab" aria-expanded="false" class="nav-link">
                                 <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
-                                <span class="d-none d-sm-block">Dato Previsional</span>    
+                                <span class="d-none d-sm-block">Dato Previsional</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="#c-familiares" data-toggle="tab" aria-expanded="false" class="nav-link">
                                 <span class="d-block d-sm-none"><i class="fas fa-cog"></i></span>
-                                <span class="d-none d-sm-block">Cargas Familiares</span>  
+                                <span class="d-none d-sm-block">Cargas Familiares</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="#observaciones" data-toggle="tab" aria-expanded="false" class="nav-link">
                                 <span class="d-block d-sm-none"><i class="fas fa-cog"></i></span>
-                                <span class="d-none d-sm-block">Observaciones</span>  
+                                <span class="d-none d-sm-block">Observaciones</span>
                             </a>
                         </li>
                     </ul>
@@ -474,7 +471,7 @@
                                             </div>
                                         </div>
                                     </form>
-                                </div> 
+                                </div>
                                 <div class="row"> <!-- 2da Fila: Sueldo, Otros Antecedentes y Contratación -->
                                     <div class="col-md-3"> <!-- Sueldo y Semana -->
                                         <div class="card-box" style="background-color: #f1f5f7">
@@ -529,7 +526,7 @@
 
 
                                         </div>
-                                    </div> 
+                                    </div>
                                     <div class="col-md-3"> <!-- Otros Antecedentes y Forma de Pago -->
                                         <div class="card-box" style="background-color: #f1f5f7">
                                             <h4 class="mt-0 mb-3 header-title">Otros Antecedentes</h4>
@@ -574,7 +571,7 @@
                                                 <option value="">Opción 3</option>
                                             </select>
                                         </div>
-                                    </div> 
+                                    </div>
                                     <div class="col-md-6"> <!-- Contratación -->
                                         <div class="card-box" style="background-color: #f1f5f7">
                                             <h4 class="mt-0 mb-3 header-title">Contratación</h4>
