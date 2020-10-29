@@ -25,15 +25,14 @@
 
 <body>
     <div class="wrapper">
-        <div class="container-fluid">
-            <div class="row">
-                <!-- Título de la página -->
+        <div class="container-fluid" style="margin-top: -100px">
+            <!-- <div class="row">
                 <div class="col-md-12">
                     <div class="page-title-box">
                         <h4 class="page-title"><i class="fas fa-futbol"></i>Arriendo de Canchas</h4>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <div class="col-xl-12">
                 <div class="card-box">
@@ -74,164 +73,170 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
-                                    <div class="card-box">
-                                        <div class="row">
-                                            <div class="col-sm">
-                                                <h4 class="header-title">Datos Usuario</h4>
-                                            </div>
-                                            <div class="col-sm text-right">
-                                                <button class="btn btn-sm btn-primary" data-toggle="modal"
-                                                    data-target=".bs-example-modal-center">
-                                                    <i class="fas fa-plus-square"></i> Agregar
-                                                </button>
-                                            </div>
-                                            <div class="modal fade bs-example-modal-center" tabindex="-1" role="dialog"
-                                                aria-labelledby="myCenterModalLabel" aria-hidden="true"
-                                                style="display: none;">
-                                                <div class="modal-dialog modal-dialog-centered">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h4 class="modal-title" id="myCenterModalLabel">Agregar
-                                                                Usuario</h4>
-                                                            <button type="button" class="close" data-dismiss="modal"
-                                                                aria-hidden="true">×</button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            <div class="col-md-12">
-                                                                <div class="card-box">
-                                                                    <div class="row">
-                                                                        <label class="col-sm-2  col-form-label"
-                                                                            for="simpleinput">RUT:</label>
-                                                                        <div class="col-sm-10">
-                                                                            <input type="text" id="simpleinput"
-                                                                                class="form-control"
-                                                                                placeholder="ej: 11111111-1">
-                                                                        </div>
-                                                                    </div> <br>
-                                                                    <div class="row">
-                                                                        <label for="nom"
-                                                                            class="col-sm-2 col-form-label">Nombre:</label>
-                                                                        <div class="col-sm-10">
-                                                                            <input type="text" id="simpleinput"
-                                                                                class="form-control">
-                                                                        </div>
-                                                                    </div> <br>
-                                                                    <div class="row">
-                                                                        <label for="nom"
-                                                                            class="col-sm-2 col-form-label">Apellido:</label>
-                                                                        <div class="col-sm-10">
-                                                                            <input type="text" id="simpleinput"
-                                                                                class="form-control">
-                                                                        </div>
-                                                                    </div> <br>
-                                                                    <button type="button"
-                                                                        class="btn btn-block btn-xs btn-primary waves-effect waves-light">Agregar
-                                                                        Usuario</button>
+                                    <form action="" method="GET">
+                                        <div class="card-box">
+                                            <div class="row">
+                                                <div class="col-sm">
+                                                    <h4 class="header-title">Datos Usuario</h4>
+                                                </div>
+                                                <div class="col-sm text-right">
+                                                    <button class="btn btn-sm btn-primary" data-toggle="modal"
+                                                        data-target=".bs-example-modal-center">
+                                                        <i class="fas fa-plus-square"></i> Agregar
+                                                    </button>
+                                                </div>
+                                                <div class="modal fade bs-example-modal-center" tabindex="-1"
+                                                    role="dialog" aria-labelledby="myCenterModalLabel"
+                                                    aria-hidden="true" style="display: none;">
+                                                    <div class="modal-dialog modal-dialog-centered">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h4 class="modal-title" id="myCenterModalLabel">Agregar
+                                                                    Usuario</h4>
+                                                                <button type="button" class="close" data-dismiss="modal"
+                                                                    aria-hidden="true">×</button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <div class="col-md-12">
+                                                                    <div class="card-box">
+                                                                        <div class="row">
+                                                                            <label class="col-sm-2  col-form-label"
+                                                                                for="simpleinput">RUT:</label>
+                                                                            <div class="col-sm-10">
+                                                                                <input type="text" id="simpleinput"
+                                                                                    class="form-control"
+                                                                                    placeholder="ej: 11111111-1">
+                                                                            </div>
+                                                                        </div> <br>
+                                                                        <div class="row">
+                                                                            <label for="nom"
+                                                                                class="col-sm-2 col-form-label">Nombre:</label>
+                                                                            <div class="col-sm-10">
+                                                                                <input type="text" id="simpleinput"
+                                                                                    class="form-control">
+                                                                            </div>
+                                                                        </div> <br>
+                                                                        <div class="row">
+                                                                            <label for="nom"
+                                                                                class="col-sm-2 col-form-label">Apellido:</label>
+                                                                            <div class="col-sm-10">
+                                                                                <input type="text" id="simpleinput"
+                                                                                    class="form-control">
+                                                                            </div>
+                                                                        </div> <br>
+                                                                        <button type="button"
+                                                                            class="btn btn-block btn-xs btn-primary waves-effect waves-light">Agregar
+                                                                            Usuario</button>
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                    </div><!-- /.modal-content -->
-                                                </div><!-- /.modal-dialog -->
-                                            </div><!-- /.modal -->
-                                        </div> <br>
-                                        <div class="row">
-                                            <div class="col-sm">
-                                                <label for="">Nombre:</label>
-                                                <input type="text" class="form-control form-control-sm">
+                                                        </div><!-- /.modal-content -->
+                                                    </div><!-- /.modal-dialog -->
+                                                </div><!-- /.modal -->
+                                            </div> <br>
+                                            <div class="row">
+                                                <div class="col-sm">
+                                                    <label for="">Nombre:</label>
+                                                    <input type="text" class="form-control form-control-sm">
+                                                </div>
+                                                <div class="col-sm">
+                                                    <label for="">Apellido:</label>
+                                                    <input type="text" class="form-control form-control-sm">
+                                                </div>
+                                            </div> <br>
+                                            <div class="row">
+                                                <div class="col-sm">
+                                                    <label for="">Teléfono:</label>
+                                                    <input type="text" class="form-control form-control-sm">
+                                                </div>
+                                                <div class="col-sm">
+                                                    <label for="">Correo:</label>
+                                                    <input type="text" class="form-control form-control-sm">
+                                                </div>
+                                            </div> <br>
+                                            <hr style="border-color: rgba(0, 0, 0, .4)">
+                                            <div class="row">
+                                                <div class="col-sm">
+                                                    <h4 class="header-title">Datos Reserva</h4>
+                                                </div>
                                             </div>
-                                            <div class="col-sm">
-                                                <label for="">Apellido:</label>
-                                                <input type="text" class="form-control form-control-sm">
-                                            </div>
-                                        </div> <br>
-                                        <div class="row">
-                                            <div class="col-sm">
-                                                <label for="">Teléfono:</label>
-                                                <input type="text" class="form-control form-control-sm">
-                                            </div>
-                                            <div class="col-sm">
-                                                <label for="">Correo:</label>
-                                                <input type="text" class="form-control form-control-sm">
-                                            </div>
-                                        </div> <br>
-                                        <div class="row">
-                                            <div class="col-sm">
-                                                <label for="">Origen:</label>
-                                                <select name="" id="" class="form-control form-control-sm">
-                                                    <option value="">Seleccione Opción</option>
-                                                    <option value="">Instagram</option>
-                                                    <option value="">Facebook</option>
-                                                    <option value="">Teléfono</option>
-                                                    <option value="">WhatsApp</option>
-                                                    <option value="">Correo</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-sm">
-                                                <label for="">Estado de Pago:</label>
-                                                <select name="" id="" class="form-control form-control-sm">
-                                                    <option value="">Seleccione Opción</option>
-                                                    <option value="">Pagado</option>
-                                                    <option value="">Por Cancelar</option>
-                                                </select>
-                                            </div>
-                                        </div> <br>
-                                    </div>
-                                    <div class="card-box">
-                                        <div class="row">
-                                            <div class="col-sm">
-                                                <h4 class="header-title">Disponibilidad de Cancha</h4>
-                                            </div>
-                                        </div> <br>
-
-                                        <div class="row">
-                                            <div class="col-sm-4">
-                                                <button type="button" class="btn btn-block btn-xxs btn-success"
-                                                    onclick="AgendarPartido()" id="cancha"><strong>CANCHA
-                                                        1</strong></button>
-                                            </div>
-                                            <label class="col-sm-8" for="simpleinput">(5-8 disponible)</label>
+                                            <div class="row">
+                                                <div class="col-sm">
+                                                    <label for="">Origen:</label>
+                                                    <select name="" id="" class="form-control form-control-sm">
+                                                        <option value="">Seleccione Opción</option>
+                                                        <option value="">Instagram</option>
+                                                        <option value="">Facebook</option>
+                                                        <option value="">Teléfono</option>
+                                                        <option value="">WhatsApp</option>
+                                                        <option value="">Correo</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm">
+                                                    <label for="">Estado de Pago:</label>
+                                                    <select name="" id="" class="form-control form-control-sm">
+                                                        <option value="">Seleccione Opción</option>
+                                                        <option value="">Pagado</option>
+                                                        <option value="">Por Cancelar</option>
+                                                    </select>
+                                                </div>
+                                            </div> <br>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label for="">Hora Inicio:</label>
+                                                    <input type="datetime-local" class="form-control form-control-sm">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <label for="">Hora Término:</label>
+                                                    <input type="datetime-local" class="form-control form-control-sm">
+                                                </div>
+                                            </div> <br>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-sm-4">
-                                                <button type="button" class="btn btn-block btn-xxs btn-success"
-                                                    onclick="AgendarPartido()" id="cancha"><strong>CANCHA
-                                                        2</strong></button>
+                                        <div class="card-box botones">
+                                            <div class="row">
+                                                <div class="col-sm">
+                                                    <h4 class="header-title">Disponibilidad de Cancha</h4>
+                                                </div>
+                                            </div> <br>
+                                            <input type="text" id="cancha">
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <input type="submit" class="btn btn-block btn-xxs btn-success" value="CANCHA 1">
+                                                </div>
+                                                <label class="col-sm-8" for="simpleinput">(5-8 disponible)</label>
                                             </div>
-                                            <label class="col-sm-8" for="simpleinput">(5-8 disponible)</label>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-4">
-                                                <button type="button" class="btn btn-block btn-xxs btn-success"
-                                                    onclick="AgendarPartido()" id="cancha"><strong>CANCHA
-                                                        3</strong></button>
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <input type="submit" class="btn btn-block btn-xxs btn-success" value="CANCHA 2">
+                                                </div>
+                                                <label class="col-sm-8" for="simpleinput">(5-8 disponible)</label>
                                             </div>
-                                            <label class="col-sm-8" for="simpleinput">(5-8 disponible)</label>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-4">
-                                                <button type="button" class="btn btn-block btn-xxs btn-success"
-                                                    onclick="AgendarPartido()" id="cancha"><strong>CANCHA
-                                                        4</strong></button>
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <input type="submit" class="btn btn-block btn-xxs btn-success" value="CANCHA 3">
+                                                </div>
+                                                <label class="col-sm-8" for="simpleinput">(5-8 disponible)</label>
                                             </div>
-                                            <label class="col-sm-8" for="simpleinput">(5-8 disponible)</label>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-4">
-                                                <button type="button" class="btn btn-block btn-xxs btn-success"
-                                                    onclick="AgendarPartido()" id="cancha"><strong>CANCHA
-                                                        5</strong></button>
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <input type="submit" class="btn btn-block btn-xxs btn-success" value="CANCHA 4">
+                                                </div>
+                                                <label class="col-sm-8" for="simpleinput">(5-8 disponible)</label>
                                             </div>
-                                            <label class="col-sm-8" for="simpleinput">(5-8 disponible)</label>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-4">
-                                                <button type="button" class="btn btn-block btn-xxs btn-success"
-                                                    onclick="AgendarPartido()" id="cancha"><strong>CANCHA
-                                                        6</strong></button>
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <input type="submit" class="btn btn-block btn-xxs btn-success" value="CANCHA 5">
+                                                </div>
+                                                <label class="col-sm-8" for="simpleinput">(5-8 disponible)</label>
                                             </div>
-                                            <label class="col-sm-8" for="simpleinput">(5-8 disponible)</label>
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <input type="submit" class="btn btn-block btn-xxs btn-success" value="CANCHA 6">
+                                                </div>
+                                                <label class="col-sm-8" for="simpleinput">(5-8 disponible)</label>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -312,6 +317,8 @@
                 </div>
             </div>
         </div>
+
+
     </div>
 
     <!-- Vendor js -->
@@ -328,7 +335,7 @@
     <script src="{{ asset('js/app.min.js') }}"></script>
 
     <!-- Inserción de Eventos -->
-    <script src="{{ asset('js/pages/eventos.js')}}"></script>
+    <script src="{{ asset('js/pages/eventos.js') }}"></script>
 
 </body>
 

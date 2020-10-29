@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('index');
+    return view('arriendo');
 });
 
 Route::get('draw2', function (){
@@ -28,4 +28,8 @@ Route::get('draw6', function (){
 
 Route::get('arriendo', function (){
     return view('arriendo');
+});
+
+Route::get('php', function (){
+    return view('eventos');
 });

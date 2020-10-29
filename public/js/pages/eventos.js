@@ -33,6 +33,7 @@
             a = this;
         a.$calendarObj = a.$calendar.fullCalendar({
             defaultView: "agendaWeek",
+            height:l(window),
             header: {
                 center: "", left: "prev title next", right: "month,agendaWeek,agendaDay"
             },
