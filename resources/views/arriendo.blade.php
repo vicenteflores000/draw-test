@@ -19,6 +19,8 @@
     <link href="{{ asset('css/icons.min.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('css/app.min.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('css/checkpoint.css') }}" rel="stylesheet" type="text/css" />
+
+
 </head>
 
 <body>
@@ -183,48 +185,48 @@
 
                                         <div class="row">
                                             <div class="col-sm-4">
-                                                <button type="button"
-                                                    class="btn btn-block btn-xxs btn-success"><strong>CANCHA
+                                                <button type="button" class="btn btn-block btn-xxs btn-success"
+                                                    onclick="AgendarPartido()" id="cancha"><strong>CANCHA
                                                         1</strong></button>
                                             </div>
                                             <label class="col-sm-8" for="simpleinput">(5-8 disponible)</label>
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-4">
-                                                <button type="button"
-                                                    class="btn btn-block btn-xxs btn-success"><strong>CANCHA
+                                                <button type="button" class="btn btn-block btn-xxs btn-success"
+                                                    onclick="AgendarPartido()" id="cancha"><strong>CANCHA
                                                         2</strong></button>
                                             </div>
                                             <label class="col-sm-8" for="simpleinput">(5-8 disponible)</label>
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-4">
-                                                <button type="button"
-                                                    class="btn btn-block btn-xxs btn-success"><strong>CANCHA
+                                                <button type="button" class="btn btn-block btn-xxs btn-success"
+                                                    onclick="AgendarPartido()" id="cancha"><strong>CANCHA
                                                         3</strong></button>
                                             </div>
                                             <label class="col-sm-8" for="simpleinput">(5-8 disponible)</label>
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-4">
-                                                <button type="button"
-                                                    class="btn btn-block btn-xxs btn-success"><strong>CANCHA
+                                                <button type="button" class="btn btn-block btn-xxs btn-success"
+                                                    onclick="AgendarPartido()" id="cancha"><strong>CANCHA
                                                         4</strong></button>
                                             </div>
                                             <label class="col-sm-8" for="simpleinput">(5-8 disponible)</label>
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-4">
-                                                <button type="button"
-                                                    class="btn btn-block btn-xxs btn-success"><strong>CANCHA
+                                                <button type="button" class="btn btn-block btn-xxs btn-success"
+                                                    onclick="AgendarPartido()" id="cancha"><strong>CANCHA
                                                         5</strong></button>
                                             </div>
                                             <label class="col-sm-8" for="simpleinput">(5-8 disponible)</label>
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-4">
-                                                <button type="button"
-                                                    class="btn btn-block btn-xxs btn-success"><strong>CANCHA
+                                                <button type="button" class="btn btn-block btn-xxs btn-success"
+                                                    onclick="AgendarPartido()" id="cancha"><strong>CANCHA
                                                         6</strong></button>
                                             </div>
                                             <label class="col-sm-8" for="simpleinput">(5-8 disponible)</label>
@@ -320,11 +322,14 @@
     <script src="{{ asset('libs/jquery-ui/jquery-ui.min.js') }}"></script>
     <script src="{{ asset('libs/fullcalendar/fullcalendar.min.js') }}"></script>
 
-    <!-- fullcalendar js -->
-    <script src="{{ asset('js/pages/fullcalendar.init.js') }}"></script>
+    <script src="{{ asset('js/es.js') }}"></script>
 
     <!-- App js-->
     <script src="{{ asset('js/app.min.js') }}"></script>
+
+    <!-- Inserción de Eventos -->
+    <script src="{{ asset('js/pages/eventos.js')}}"></script>
+
 </body>
 
 </html>

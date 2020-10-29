@@ -448,7 +448,7 @@
         return this._longDateFormat[key];
     }
 
-    var defaultInvalidDate = 'Invalid date';
+    var defaultInvalidDate = 'Fecha Inválida';
 
     function invalidDate () {
         return this._invalidDate;
@@ -462,20 +462,20 @@
     }
 
     var defaultRelativeTime = {
-        future : 'in %s',
-        past   : '%s ago',
-        s  : 'a few seconds',
-        ss : '%d seconds',
-        m  : 'a minute',
-        mm : '%d minutes',
-        h  : 'an hour',
-        hh : '%d hours',
-        d  : 'a day',
-        dd : '%d days',
-        M  : 'a month',
-        MM : '%d months',
-        y  : 'a year',
-        yy : '%d years'
+        future : 'en %s',
+        past   : '%s atrás',
+        s  : 'unos segundos',
+        ss : '%d segundos',
+        m  : 'un minuto',
+        mm : '%d minutos',
+        h  : 'una hora',
+        hh : '%d horas',
+        d  : 'un día',
+        dd : '%d días',
+        M  : 'un mes',
+        MM : '%d meses',
+        y  : 'un año',
+        yy : '%d años'
     };
 
     function relativeTime (number, withoutSuffix, string, isFuture) {
@@ -925,7 +925,7 @@
     // LOCALES
 
     var MONTHS_IN_FORMAT = /D[oD]?(\[[^\[\]]*\]|\s)+MMMM?/;
-    var defaultLocaleMonths = 'January_February_March_April_May_June_July_August_September_October_November_December'.split('_');
+    var defaultLocaleMonths = 'Enero_Febrero_Marzo_Abril_Mayo_Junio_Julio_Agosto_Septiembre_Octubre_Noviembre_Diciembre'.split('_');
     function localeMonths (m, format) {
         if (!m) {
             return isArray(this._months) ? this._months :
@@ -935,7 +935,7 @@
             this._months[(this._months.isFormat || MONTHS_IN_FORMAT).test(format) ? 'format' : 'standalone'][m.month()];
     }
 
-    var defaultLocaleMonthsShort = 'Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec'.split('_');
+    var defaultLocaleMonthsShort = 'Ene_Feb_Mar_Abr_May_Jun_Jul_Ago_Sep_Oct_Nov_Dic'.split('_');
     function localeMonthsShort (m, format) {
         if (!m) {
             return isArray(this._monthsShort) ? this._monthsShort :
@@ -1272,8 +1272,8 @@
     }
 
     var defaultLocaleWeek = {
-        dow : 0, // Sunday is the first day of the week.
-        doy : 6  // The week that contains Jan 6th is the first week of the year.
+        dow : 1, // Sunday is the first day of the week.
+        doy : 7  // The week that contains Jan 6th is the first week of the year.
     };
 
     function localeFirstDayOfWeek () {
@@ -1386,7 +1386,7 @@
         return ws.slice(n, 7).concat(ws.slice(0, n));
     }
 
-    var defaultLocaleWeekdays = 'Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday'.split('_');
+    var defaultLocaleWeekdays = 'Domingo_Lunes_Martes_Miércoles_Jueves_Sábado'.split('_');
     function localeWeekdays (m, format) {
         var weekdays = isArray(this._weekdays) ? this._weekdays :
             this._weekdays[(m && m !== true && this._weekdays.isFormat.test(format)) ? 'format' : 'standalone'];
@@ -1394,13 +1394,13 @@
             : (m) ? weekdays[m.day()] : weekdays;
     }
 
-    var defaultLocaleWeekdaysShort = 'Sun_Mon_Tue_Wed_Thu_Fri_Sat'.split('_');
+    var defaultLocaleWeekdaysShort = 'Dom_Lun_Mar_Mie_Jue_Vie_Sab'.split('_');
     function localeWeekdaysShort (m) {
         return (m === true) ? shiftWeekdays(this._weekdaysShort, this._week.dow)
             : (m) ? this._weekdaysShort[m.day()] : this._weekdaysShort;
     }
 
-    var defaultLocaleWeekdaysMin = 'Su_Mo_Tu_We_Th_Fr_Sa'.split('_');
+    var defaultLocaleWeekdaysMin = 'Do_Lu_Ma_Mi_Ju_Vi_Sa'.split('_');
     function localeWeekdaysMin (m) {
         return (m === true) ? shiftWeekdays(this._weekdaysMin, this._week.dow)
             : (m) ? this._weekdaysMin[m.day()] : this._weekdaysMin;
@@ -4576,7 +4576,7 @@
     hooks.weekdaysMin           = listWeekdaysMin;
     hooks.defineLocale          = defineLocale;
     hooks.updateLocale          = updateLocale;
-    hooks.locales               = listLocales;
+    hooks.locales               = listLocales;      
     hooks.weekdaysShort         = listWeekdaysShort;
     hooks.normalizeUnits        = normalizeUnits;
     hooks.relativeTimeRounding  = getSetRelativeTimeRounding;
@@ -4598,5 +4598,4 @@
     };
 
     return hooks;
-
 })));
