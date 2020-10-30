@@ -249,21 +249,11 @@
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h4 class="modal-title mt-0"><strong>Agregar Evento</strong></h4>
+                                            <h4 class="modal-title mt-0"><strong>INFORMACIÓN DEL EVENTO</strong></h4>
                                             <button type="button" class="close" data-dismiss="modal"
                                                 aria-hidden="true">&times;</button>
                                         </div>
                                         <div class="modal-body"></div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-light waves-effect"
-                                                data-dismiss="modal">Cerrar</button>
-                                            <button type="button"
-                                                class="btn btn-success save-event waves-effect waves-light">Crear
-                                                Evento</button>
-                                            <button type="button"
-                                                class="btn btn-danger delete-event waves-effect waves-light"
-                                                data-dismiss="modal">Eliminar</button>
-                                        </div>
                                     </div>
                                 </div>
                             </div>

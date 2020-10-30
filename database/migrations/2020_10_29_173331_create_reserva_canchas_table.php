@@ -15,10 +15,10 @@ class CreateReservaCanchasTable extends Migration
     {
         Schema::create('reserva_canchas', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre');
-            $table->string('cancha');
-            $table->date('fechaInicio');
-            $table->date('fechaTermino');
+            $table->string('title');
+            $table->string('descripcion');
+            $table->date('start');
+            $table->date('end');
             $table->timestamps();
         });
     }

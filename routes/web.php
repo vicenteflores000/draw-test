@@ -33,3 +33,7 @@ Route::get('arriendo', function (){
 Route::get('php', function (){
     return view('eventos');
 });
+
+Route::get('modelo', function (){
+    return view('modelo_agendas');
+});
