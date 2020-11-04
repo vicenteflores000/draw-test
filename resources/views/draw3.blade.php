@@ -424,14 +424,15 @@
                             <div class="col-md-6">
                                 <div class="card-box">
                                     <label for="nombre">Nombre:</label><br>
-                                    <input type="text" class="form-control" name="nombre" id='txtNombre' placeholder="robert lewandowski">
+                                    <input type="text" oninput="habilitar()" class="form-control" id='nombre'
+                                        placeholder="robert lewandowski">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="card-box">
                                     <label for="rut">Rut:</label><br>
-                                    <input type="text" id="rut" class="form-control" name="rut" id='txtRut'
-                                        placeholder="ej:222222-2">
+                                    <input type="text" id="rut" disabled class="form-control" id='rut'
+                                        placeholder="ej:222222-2" required>
                                 </div>
                             </div>
                         </div>
@@ -523,22 +524,21 @@
                                         <h4 class="mt-0 mb-3 header-title">Cotización Pactada</h4>
                                         <form>
                                             <div class="form-group">
-                                                <input type="checkbox" name="Cotización-Pactada"
-                                                    id="Cotización-Pactada">
-                                                <label for="Cotización-Pactada">No Cotiza Salud</label>
+                                                <input type="checkbox" id="nocot" onclick="nocotiza()">
+                                                <label for="nocot">No cotizo Salud</label>
                                             </div>
                                             <div class="form-group">
                                                 <label>Monto</label>
                                                 <input type="text" class="form-control" data-toggle="input-mask"
-                                                    data-mask-format="000.000.000.000.000,00" data-reverse="true"
-                                                    placeholder="111.111.111">
+                                                    data-mask-format="000.000.000.000.000,00" placeholder="111.111.111"
+                                                    id="monto">
                                                 <span class="font-13 text-muted"></span>
                                             </div>
                                             <div class="form-group">
                                                 <label>Monto U.F</label>
                                                 <input type="text" class="form-control" data-toggle="input-mask"
-                                                    data-mask-format="000.000.000.000.000,00" data-reverse="true"
-                                                    placeholder="111.111.111">
+                                                    data-mask-format="000.000.000.000.000,00" placeholder="111.111.111"
+                                                    id="uf">
                                                 <span class="font-13 text-muted"></span>
                                             </div>
                                         </form>
@@ -548,8 +548,7 @@
                                         <div class="form-group">
                                             <div class="form-group">
                                                 <input type="text" class="form-control" data-toggle="input-mask"
-                                                    data-mask-format="000.000.000.000.000,00" data-reverse="true"
-                                                    placeholder="111.111.111">
+                                                    data-mask-format="000.000.000.000.000,00" placeholder="111.111.111">
                                                 <span class="font-13 text-muted"></span>
                                             </div>
                                             <div class="form-group">
@@ -658,22 +657,22 @@
                                         <h4 class="mt-0 mb-3 header-title">Ley 19.010</h4>
                                         <form>
                                             <div class="form-group">
-                                                <input class="form-group" type="checkbox" id="Ley 19.010"
-                                                    name="Ley 19.010" value="Ley 19.010">
-                                                <label for="proporcional">Beneficiado</label>
+                                                <input class="form-group" type="checkbox" id="ley19"
+                                                 onclick="laley19()">
+                                                <label >Beneficiado</label>
                                             </div>
                                             <div class="form-group">
-                                                <label for="rem"> Tasa% </label>
+                                                <label> Tasa% </label>
                                                 <input type="number" class="form-control" id="rem" placeholder="0">
                                             </div>
                                             <div class="form-group">
                                                 <label>Fecha Pacto</label>
                                                 <input type="text" class="form-control" data-toggle="input-mask"
-                                                    data-mask-format="00/00/0000" placeholder="Día/Mes/Año">
+                                                    data-mask-format="00/00/0000" id="pacto" placeholder="Día/Mes/Año">
                                                 <span class="font-13 text-muted"></span>
                                             </div>
                                             <label>A.F.P</label>
-                                            <select name="afp" id="afp" class="form-control">
+                                            <select id="afp" class="form-control">
                                                 <option>A.F.P</option>
                                                 <option>Capital</option>
                                                 <option>Cuprum</option>
@@ -686,32 +685,30 @@
                                         <h4 class="mt-0 mb-3 header-title">Servicio médico. C.CH.C</h4>
                                         <form>
                                             <div class="form-group">
-                                                <input class="form-group" type="checkbox" id="medico" name="medico"
-                                                    value="medico">
+                                                <input class="form-group" type="checkbox" id="medico">
                                                 <label for="medico">Servicio Médico</label>
 
-                                                <input class="form_group" type="checkbox" id="Socio" name="Socio"
-                                                    value="Socio">
+                                                <input class="form_group" type="checkbox" id="Socio">
                                                 <label for="Socio">Socio</label>
                                             </div>
                                             <div class="form-group">
                                                 <label>C.Norm</label>
                                                 <input type="text" class="form-control" data-toggle="input-mask"
-                                                    data-mask-format="000.000.000.000.000,00" data-reverse="true"
+                                                    data-mask-format="000.000.000.000.000,00" id="norm"
                                                     placeholder="111.111.111">
                                             </div>
                                             <div class="form-group">
                                                 <label>C.Esp.</label>
                                                 <input type="text" class="form-control" data-toggle="input-mask"
-                                                    data-mask-format="000.000.000.000.000,00" data-reverse="true"
-                                                    placeholder="111.111.111">
+                                                    data-mask-format="000.000.000.000.000,00" id="esp"
+                                                    placeholder="111.111.111" disabled>
                                                 <span class="font-13 text-muted"></span>
                                             </div>
                                             <div class="form-group">
                                                 <label>Remuneración. Cargas Esp.</label>
                                                 <input type="text" class="form-control" data-toggle="input-mask"
-                                                    data-mask-format="000.000.000.000.000,00" data-reverse="true"
-                                                    placeholder="111.111.111">
+                                                    data-mask-format="000.000.000.000.000,00" id="cargas"
+                                                    placeholder="111.111.111" disabled>
                                             </div>
                                         </form>
                                     </div>
@@ -776,5 +773,4 @@
             </form>
         </div>
     </div>
-    <script src="prueba.js"></script>
 </body>

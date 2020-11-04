@@ -6,6 +6,14 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('curso', function () {
+    return view('curso');
+});
+
+Route::get('hhh', function () {
+    return view('hhh');
+});
+
 Route::get('draw2', function (){
     return view('draw2');
 });
