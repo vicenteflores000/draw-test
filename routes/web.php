@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\StandsController;
 
 Route::get('/', function () {
     return view('arriendo');
@@ -37,3 +38,9 @@ Route::get('php', function (){
 Route::get('modelo', function (){
     return view('modelo_agendas');
 });
+
+Route::get('agenda', function (){
+    return view('agenda');
+});
+
+Route::resource('test', StandsController::class);

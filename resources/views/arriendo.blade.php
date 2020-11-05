@@ -198,7 +198,6 @@
                                                     <h4 class="header-title">Disponibilidad de Cancha</h4>
                                                 </div>
                                             </div> <br>
-                                            <input type="text" id="cancha">
                                             <div class="row">
                                                 <div class="col-sm-4">
                                                     <input type="submit" class="btn btn-block btn-xxs btn-success" value="CANCHA 1">
