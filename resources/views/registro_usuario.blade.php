@@ -409,66 +409,6 @@
                 </div>
             </div>
 
-            <div class="row" style="display: none" id="agregar-recurso">
-                <div class="col-xl-12">
-                    <div class="card-box">
-                        <h4 class="header-title mt-0 mb-3" data-form_title="">Agregar Recurso</h4>
-                        <form id="primal-form">
-                            <div class="row">
-                                <div class="col-xl-10">
-                                    <div class="form-group">
-                                        <label for="reservable_type">reservable_type</label>
-                                        <input type="text" name="reservable_type" autocomplete="off"
-                                            class="form-control input-xs">
-                                    </div>
-                                </div>
-                                <div class="col-xl-2 align-self-center mt-1 text-right">
-                                    <button type="button" class="btn btn-sm btn-success waves-effect waves-light mr-1">
-                                        <i class="fa fa-check"></i>
-                                        Guardar
-                                    </button>
-                                    <button type="button" class="btn btn-sm btn-secondary waves-effect waves-light"
-                                        id="cancelar-agregar-recurso">
-                                        <i class="fa fa-times"></i>
-                                        Cancelar
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row" style="display: none" id="agregar-responsable">
-                <div class="col-xl-12">
-                    <div class="card-box">
-                        <h4 class="header-title mt-0 mb-3" data-form_title="">Agregar Responsable</h4>
-                        <form id="primal-form">
-                            <div class="row">
-                                <div class="col-xl-10">
-                                    <div class="form-group">
-                                        <label for="reservable_type">reservable_type</label>
-                                        <input type="text" name="reservable_type" autocomplete="off"
-                                            class="form-control input-xs">
-                                    </div>
-                                </div>
-                                <div class="col-xl-2 align-self-center mt-1 text-right">
-                                    <button type="button" class="btn btn-sm btn-success waves-effect waves-light mr-1">
-                                        <i class="fa fa-check"></i>
-                                        Guardar
-                                    </button>
-                                    <button type="button" class="btn btn-sm btn-secondary waves-effect waves-light"
-                                        id="cancelar-agregar-responsable">
-                                        <i class="fa fa-times"></i>
-                                        Cancelar
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
             <div class="card-box">
                 <form>
                     <div class="row">

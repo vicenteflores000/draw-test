@@ -43,4 +43,8 @@ Route::get('agenda', function (){
     return view('agenda');
 });
 
+Route::get('registro_usuario', function (){
+    return view('registro_usuario');
+});
+
 Route::resource('test', StandsController::class);
