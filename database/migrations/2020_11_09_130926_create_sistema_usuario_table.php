@@ -6,23 +6,17 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateSistemaUsuarioTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('sistema_usuario', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            // Convencion
+            $table->integer('author_id');
+            $table->tinyInteger('status')->default(1);
+            $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('sistema_usuario');

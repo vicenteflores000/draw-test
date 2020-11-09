@@ -6,24 +6,18 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateAgendaRecursoTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('agenda_recurso', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->morphs('modelo');
+            // Convencion
+            $table->integer('author_id');
+            $table->tinyInteger('status')->default(1);
+            $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('agenda_recurso');
