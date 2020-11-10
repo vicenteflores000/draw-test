@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Reserva;
+use App\Models\Oficina;
 use Illuminate\Http\Request;
 
-class ReservaController extends Controller
+class OficinaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -24,7 +24,7 @@ class ReservaController extends Controller
      */
     public function create()
     {
-        
+        //
     }
 
     /**
@@ -41,10 +41,10 @@ class ReservaController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\ReservaCancha  $reservaCancha
+     * @param  \App\Models\Oficina  $oficina
      * @return \Illuminate\Http\Response
      */
-    public function show(Reserva $reserva)
+    public function show(Oficina $oficina)
     {
         //
     }
@@ -52,10 +52,10 @@ class ReservaController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\ReservaCancha  $reservaCancha
+     * @param  \App\Models\Oficina  $oficina
      * @return \Illuminate\Http\Response
      */
-    public function edit(Reserva $reserva)
+    public function edit(Oficina $oficina)
     {
         //
     }
@@ -64,10 +64,10 @@ class ReservaController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\ReservaCancha  $reservaCancha
+     * @param  \App\Models\Oficina  $oficina
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Reserva $reserva)
+    public function update(Request $request, Oficina $oficina)
     {
         //
     }
@@ -75,10 +75,10 @@ class ReservaController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\ReservaCancha  $reservaCancha
+     * @param  \App\Models\Oficina  $oficina
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Reserva $reserva)
+    public function destroy(Oficina $oficina)
     {
         //
     }

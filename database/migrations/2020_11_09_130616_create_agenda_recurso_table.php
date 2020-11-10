@@ -10,7 +10,7 @@ class CreateAgendaRecursoTable extends Migration
     {
         Schema::create('agenda_recurso', function (Blueprint $table) {
             $table->increments('id');
-            $table->morphs('modelo');
+            $table->morphs('model');
             // Convencion
             $table->integer('author_id');
             $table->tinyInteger('status')->default(1);
