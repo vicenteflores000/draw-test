@@ -658,8 +658,8 @@
                                         <form>
                                             <div class="form-group">
                                                 <input class="form-group" type="checkbox" id="ley19"
-                                                 onclick="laley19()">
-                                                <label >Beneficiado</label>
+                                                    onclick="laley19()">
+                                                <label>Beneficiado</label>
                                             </div>
                                             <div class="form-group">
                                                 <label> Tasa% </label>

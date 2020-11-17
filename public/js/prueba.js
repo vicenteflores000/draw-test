@@ -7,7 +7,7 @@ function enable() {
   document.getElementById("elpepe").disabled = false;
 }
 
-function nocotiza(nocot) {
+function nocotiza() {
   var checkbox = document.getElementById('nocot');
   if (checkbox.checked) {
     document.getElementById('monto').setAttribute('disabled', true);
@@ -43,3 +43,5 @@ function laley19(ley19) {
   }
 
 }
+
+

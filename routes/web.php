@@ -7,6 +7,23 @@ Route::get('/', function () {
     return view('arriendo');
 });
 
+Route::get('funcionesmatt', function () {
+    return view('funcionesmatt');
+});
+
+Route::get('autos', function () {
+    return view('autos');
+});
+
+Route::get('objetoscancha', function () {
+    return view('objetoscancha');
+});
+
+
+Route::get('objetos', function () {
+    return view('objetos');
+});
+
 Route::get('curso', function () {
     return view('curso');
 });
@@ -15,43 +32,43 @@ Route::get('hhh', function () {
     return view('hhh');
 });
 
-Route::get('draw2', function (){
+Route::get('draw2', function () {
     return view('draw2');
 });
 
-Route::get('draw3', function (){
+Route::get('draw3', function () {
     return view('draw3');
 });
 
-Route::get('draw4', function (){
+Route::get('draw4', function () {
     return view('draw4');
 });
 
-Route::get('draw5', function (){
+Route::get('draw5', function () {
     return view('draw5');
 });
 
-Route::get('draw6', function (){
+Route::get('draw6', function () {
     return view('draw6');
 });
 
-Route::get('arriendo', function (){
+Route::get('arriendo', function () {
     return view('arriendo');
 });
 
-Route::get('php', function (){
+Route::get('php', function () {
     return view('eventos');
 });
 
-Route::get('modelo', function (){
+Route::get('modelo', function () {
     return view('modelo_agendas');
 });
 
-Route::get('agenda', function (){
+Route::get('agenda', function () {
     return view('agenda');
 });
 
-Route::get('registro_usuario', function (){
+Route::get('registro_usuario', function () {
     return view('registro_usuario');
 });
 
