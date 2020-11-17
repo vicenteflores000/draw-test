@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\sistema_usuario;
+use App\Models\SistemaUsuario;
 use Illuminate\Http\Request;
 
 class SistemaUsuarioController extends Controller
@@ -41,10 +41,10 @@ class SistemaUsuarioController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\sistema_usuario  $sistema_usuario
+     * @param  \App\Models\SistemaUsuario  $SistemaUsuario
      * @return \Illuminate\Http\Response
      */
-    public function show(sistema_usuario $sistema_usuario)
+    public function show(SistemaUsuario $sistemasuario)
     {
         //
     }
@@ -52,10 +52,10 @@ class SistemaUsuarioController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\sistema_usuario  $sistema_usuario
+     * @param  \App\Models\SistemaUsuario  $SistemaUsuario
      * @return \Illuminate\Http\Response
      */
-    public function edit(sistema_usuario $sistema_usuario)
+    public function edit(SistemaUsuario $sistema_usuario)
     {
         //
     }
@@ -64,10 +64,10 @@ class SistemaUsuarioController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\sistema_usuario  $sistema_usuario
+     * @param  \App\Models\SistemaUsuario  $SistemaUsuario
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, sistema_usuario $sistema_usuario)
+    public function update(Request $request, SistemaUsuario $sistema_usuario)
     {
         //
     }
@@ -75,10 +75,10 @@ class SistemaUsuarioController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\sistema_usuario  $sistema_usuario
+     * @param  \App\Models\SistemaUsuario  $SistemaUsuario
      * @return \Illuminate\Http\Response
      */
-    public function destroy(sistema_usuario $sistema_usuario)
+    public function destroy(SistemaUsuario $sistema_usuario)
     {
         //
     }
