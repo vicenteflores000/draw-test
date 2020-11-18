@@ -19,6 +19,9 @@ Route::get('objetoscancha', function () {
     return view('objetoscancha');
 });
 
+Route::get('funciones', function () {
+    return view('funciones');
+});
 
 Route::get('objetos', function () {
     return view('objetos');

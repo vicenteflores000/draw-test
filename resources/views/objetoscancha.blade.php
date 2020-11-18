@@ -325,28 +325,32 @@
                         <div class="calculadora">
                             <div class="input-group input-group-sm mb-3">
                                 <div class="input-group-prepend">
+
+
                                     <span class="input-group-text" id="numeross">numeros</span>
+
+
                                 </div>
                                 <input type="text" class="form-control" aria-label="Small"
                                     aria-describedby="inputGroup-sizing-sm">
                             </div>
-
                             <div>
                                 <td><span id="resultado"></span></td>
                             </div>
                             <div>
                                 <div>
                                     <div class="btn-group" role="group" aria-label="Basic example">
-                                        <button type="button" class="btn btn-secondary" id="cero">0</button>
-                                        <button type="button" class="btn btn-secondary" id="uno">1</button>
-                                        <button type="button" class="btn btn-secondary" id="dos">2</button>
-                                        <button type="button" class="btn btn-secondary" id="tres">3</button>
-                                        <button type="button" class="btn btn-secondary" id="cuatro">4</button>
-                                        <button type="button" class="btn btn-secondary" id="cinco">5</button>
-                                        <button type="button" class="btn btn-secondary" id="seis">6</button>
-                                        <button type="button" class="btn btn-secondary" id="siete">7</button>
-                                        <button type="button" class="btn btn-secondary" id="ocho">8</button>
-                                        <button type="button" class="btn btn-secondary" id="nueve">9</button><br>
+                                        <button type="button" class="btn btn-secondary" id="cero" value="0">0</button>
+                                        <button type="button" class="btn btn-secondary" id="uno" value="1">1</button>
+                                        <button type="button" class="btn btn-secondary" id="dos" value="2">2</button>
+                                        <button type="button" class="btn btn-secondary" id="tres" value="3">3</button>
+                                        <button type="button" class="btn btn-secondary" id="cuatro" value="4">4</button>
+                                        <button type="button" class="btn btn-secondary" id="cinco" value="5">5</button>
+                                        <button type="button" class="btn btn-secondary" id="seis" value="6">6</button>
+                                        <button type="button" class="btn btn-secondary" id="siete" value="7">7</button>
+                                        <button type="button" class="btn btn-secondary" id="ocho" value="8">8</button>
+                                        <button type="button" class="btn btn-secondary" id="nueve"
+                                            value="9">9</button><br>
                                     </div>
                                     <div class="btn-group" role="group" aria-label="Basic example">
                                         <button type="button" class="btn btn-secondary" id="multiplicacion">*</button>
@@ -355,15 +359,57 @@
                                         <button type="button" class="btn btn-secondary" id="igual">=</button>
                                         <button type="button" class="btn btn-secondary" id="suma">+</button>
                                     </div>
+
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <script src="{{ asset('js/calculadora.js') }}"></script>
-            <script src="{{ asset('js/funcionesmat.js') }}"></script>
-            <script src="{{ asset('js/canchafunciones.js') }}"></script>
+                Hacer un formulario html que represente una calculadora, y agrega funcionalidad JS para generar los
+                calculos.
+                Restricción: debe usar objetos de Javascript
+
+
+                <div class="card-box">
+                    <div class="row">
+                        <div class="card-box col-md-2 border border-dark p-3 mb-2 bg-primary text-white">
+                            <form name="calculator">
+                                <h3>Calculadora</h3>
+                                <div>
+                                    <div>
+                                        <input type="textfield" name="ans" value="" id="resultadoo">
+                                    </div><br>
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-secondary" id="0" value="0">0</button>
+                                        <button type="button" class="btn btn-secondary" id="1" value="1">1</button>
+                                        <button type="button" class="btn btn-secondary" id="2" value="2">2</button>
+                                        <button type="button" class="btn btn-secondary" id="3" value="3">3</button>
+                                        <button type="button" class="btn btn-secondary" id="4" value="4">4</button>
+                                    </div><br>
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-secondary" id="5" value="5">5</button>
+                                        <button type="button" class="btn btn-secondary" id="6" value="6">6</button>
+                                        <button type="button" class="btn btn-secondary" id="7" value="7">7</button>
+                                        <button type="button" class="btn btn-secondary" id="8" value="8">8</button>
+                                        <button type="button" class="btn btn-secondary" id="9" value="9">9</button>
+                                    </div>
+                                </div>
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-secondary" id="*">*</button>
+                                    <button type="button" class="btn btn-secondary" id="-">-</button>
+                                    <button type="button" class="btn btn-secondary" id="/">/</button>
+                                    <button type="button" class="btn btn-secondary" id="=">=</button>
+                                    <button type="button" class="btn btn-secondary" id="+">+</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <script src="{{ asset('js/calculadora.js') }}"></script>
+                <script src="{{ asset('js/funcionesmat.js') }}"></script>
+                <script src="{{ asset('js/canchafunciones.js') }}"></script>
 </body>
 
 </html>
