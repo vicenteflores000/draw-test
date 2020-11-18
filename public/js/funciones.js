@@ -57,68 +57,65 @@ nombre.forEach(function (elemento, indice) {
     console.log(elemento, indice); //muestra el listado junto con su numero o indice
 })
 
-
-var palabra = ["busca"];
-var texto = "Los textos es un conjunto de signos y símbolos propios de un lenguaje propio, que, formando un código, transmiten un mensaje son sentido y significado, solamente entendible por quienes comprenden dicho código (es decir, dicho lenguaje). ... Ejemplos de textos narrativos son “Los papeles del agua” o “La sombra en busca viento”."
-    ;
-var resultado = "";
-var pos = -1
-
-palabra.forEach(function (element) {
-
-    pos = texto.search(element.toString());
-
+function buscadorpalabra(palabra, texto) {
+    var pos = -1
+    pos = texto.search(palabra.toString());
     if (pos != -1) {
-        resultado += " Palabra " + element + " " + "encontrada en la posición " + pos;
-    } if (pos === -1 && resultado === "") { resultado = false; }
-    console.log(resultado);
-});
+        return true;
+    } else {
+        return false;
+    }
+}
+buscadorpalabra('alemanas',
+    'sobre Ucrania. La selección alemanas - para alcanzar las semifinales.')
+
 
 //buscar un numero en texto
 //como ocupar filter
-let numeroarray = [1,2,3,4,5,6,7,8,9,10]
+let numeroarray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 let newnumeroarray = numeroarray.filter(item => {
     return item > 5
 })
 console.log('numeroarray =>', numeroarray)
 console.log('newnumeroarray =>', newnumeroarray)
 // como ocupar bien join
-var x=[1,2,3,4,5,6,7,8,9,10]
-var y =x.join("+");
+var x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+var y = x.join("+");
 console.log(y);
 //para que sirve split
-var x="1,2,3,4,5,6,7,8,9,10"
-console.log(typeof(x));
-x=x.split(",");
+var x = "1,2,3,4,5,6,7,8,9,10"
+console.log(typeof (x));
+x = x.split(",");
 console.log(x)
 //como ocupar map
-const myarray = [3,5,1];
-const nuevoarray = myarray.map(function(current){
+const myarray = [3, 5, 1];
+const nuevoarray = myarray.map(function (current) {
     return current * 2;
 });
 console.log('map', nuevoarray);
 
 //inicio de buscador de numeros
 
+
+function getNumbersInString(buscador) {
+    var divtexto = buscador.split("");
+    var arreglonuevo = divtexto.map(function (current) {
+        if (!isNaN(parseInt(current))) {
+            return current;
+        }
+    });
+
+    var numeros = arreglonuevo.filter(function (value) {
+        return value != undefined;
+    });
+
+    return numeros.join("");
+};
+
+
 var texto1 = "dk2ls3akd2";
 var texto2 = "jdsajdsa4jdsasj";
 var texto3 = "djaksdj3 dskj12 ad2";
-
-function getNumbersInString(buscador) {
-  var divtexto = buscador.split("");
-  var arreglonuevo = divtexto.map(function(current) {
-    if (!isNaN(parseInt(current))) {
-      return current;
-    }
-  });
-
-  var numeros = arreglonuevo.filter(function(value) {
-    return value != undefined;
-  });
-
-  return numeros.join("");
-};
-
 console.log(getNumbersInString(texto1));
-console.log(getNumbersInString(texto2)); 
+console.log(getNumbersInString(texto2));
 console.log(getNumbersInString(texto3));
