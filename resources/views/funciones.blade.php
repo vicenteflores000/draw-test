@@ -10,52 +10,92 @@
 </head>
 
 <body>
+    <div class="container-fluid">
 
-    <div class="wrapper">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
-                    <div class="col-md-6">
-                        <div class="card-box">
-                            <h3 class="col-md-12">Salzburg vs Bayern</h3><br>
-                            <label>Datos del partido:</label><br>
-                            <label>alineación Bayern Munich:</label>
-                            <script>
-                                var arquero = ["Neuer"];
-                                var defensas = ["Saar", "Sule", "Boateng", "Davies"];
-                                var mediocampo = ["Kimmich", "Goretzka", "Muller"];
-                                var delanteros = ["Gnabry", "Lewandowski", "Sane"];
+        <div class="card-box">
+            <div class="col-md-12">
+                <h3> Datos de partido : </h3>
+                <div class="row">
 
-                            </script>
-                            <h3 class="col-md-12">Salzburg vs Bayern</h3><br>
-                            <h3> Posesion </h3>
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-striped bg-info" role="progressbar"
-                                    style="width: 37%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">37%</div>
-                                <div class="progress-bar progress-bar-striped bg-warning" role="progressbar"
-                                    style="width: 1%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                <div class="progress-bar progress-bar-striped bg-danger" role="progressbar"
-                                    style="width: 63%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">63%</div>
-                            </div>
-                            <h3> Duelos ganados </h3>
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-striped bg-info" role="progressbar"
-                                    style="width: 47,6%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">47,6%</div>
-                                <div class="progress-bar progress-bar-striped bg-warning" role="progressbar"
-                                    style="width: 1%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                <div class="progress-bar progress-bar-striped bg-danger" role="progressbar"
-                                    style="width: 52,4%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">52,4%</div>
-                            </div>
-                        </div>
+                    <div class="card-box col-md-2">
+                        <h5> Equipos : </h5>
+                        <label>Equipo A</label><br>
+                        <input type="text" id="equipoa"><br>
+                        <label>Equipo B</label><br>
+                        <input type="text" id="equipob">
                     </div>
+
+
+                    <div class="card-box col-md-2">
+                        <h5> Posesion : </h5>
+                        <label>Minutos con balon equipo "A" : </label><br>
+                        <input type="number" id="minutosconbalona"><br>
+                        <label>Minutos con balon equipo "B" : </label><br>
+                        <input type="number" id="minutosconbalonb">
+                    </div>
+
+
+                    <div class="card-box col-md-2">
+                        <h5> Precision de tiros : </h5>
+                        <label>Tiros equipo "A" : </label><br>
+                        <input type="number" id="tirosa"><br>
+                        <label>Tiros equipo "B" : </label><br>
+                        <input type="number" id="tirosb"><br>
+                        <label>Tiros al arco equipo "A" : </label><br>
+                        <input type="number" id="tirosarcoa"><br>
+                        <label>Tiros al arco equipo "B" : </label><br>
+                        <input type="number" id="tirosarcob">
+                    </div>
+
+
+                    <div class="card-box col-md-2">
+                        <h5> Precision de pases : </h5>
+                        <label>Pases completados equipo "A" : </label><br>
+                        <input type="number" id="pasescompletadosa"><br>
+                        <label>Pases completados equipo "B" : </label><br>
+                        <input type="number" id="pasescompletadosb"><br>
+                        <label>Pases errados equipo "A" : </label><br>
+                        <input type="number" id="paseserradosa"><br>
+                        <label>Pases errados equipo "B" : </label><br>
+                        <input type="number" id="paseserradosb">
+                    </div>
+
+
+                    <div class="card-box col-md-2">
+                        <h5> Goles : </h5>
+                        <label>Goles equipo "A" : </label><br>
+                        <input type="number" id="golesa"><br>
+                        <label>Goles equipo "B" : </label><br>
+                        <input type="number" id="golesb">
+                    </div>
+
+                    <div class="card-box col-md-1">
+                        <h5> Enviar </h5>
+                        <label> si todos los datos estan correctamente llenados por favor enviar para obtener de manera
+                            detallada los datos del partido</label>
+                        <button type="button" class="btn btn-success">Listo</button>
+                    </div>
+
                 </div>
             </div>
-
         </div>
     </div>
 
+    <div class="container-fluid">
 
-    <script src="{{ asset('js/funciones.js') }}"></script>
+        <div class="card-box">
+            <div class="col-md-12">
+                <h3> Resultados del partido : </h3>
+                <div class="row">
+
+                    <div class="card-box col-md-12">
+                        <h5> Resumen : </h5>
+                        <textarea class="form-control" id="Res" rows="5"></textarea>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="{{ asset('js/funciones.js') }}"></script>
 </body>
-
 </html>
