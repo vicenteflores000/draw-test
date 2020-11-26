@@ -1,262 +1,130 @@
 
-//funcion con argumentos o parametros
-function myFunction(a, b) {
-    //console.log(a * b);
-}
-var x = myFunction(4, 3);
-//funcion basica
-
-function mensaje(msj) {
-    // console.log(msj)
-};
-var msj = "variablemsj"
-mensaje(msj);
-
-//funcion return
-
-function re() {
-    return "funciono el return";
-};
-
-var aa = re();
-//console.log(aa)
-
-//funciones recursivas
-
-var fact = function (n) {
-    if ((n == 1) || (n == 0))
-        return 1;
-    else
-        return (n * fact(n - 1));
-}
-//console.log(fact(5));
-
-//arreglos
-
-//var nombre = ['gnabry', 'kimmich', 'muller', 'lewandowski'];
-//var dia = new Array('lunes', 'martes', 'miercoles', 'jueves');
-
-//console.log(nombre[2]);
-//console.log(dia[2]);
-
-//nombre[0] = 'sule';
-//dia[1] = 'domingo';
-
-//console.log(nombre[0]);
-//console.log(dia[1]);
-//console.log(nombre);
-//nombre.push('sane'); //agrega un nuevo elemento al array
-//console.log(nombre);
-//nombre.unshift('tolisso') //agrega un elemento al array
-//console.log(nombre);
-//nombre.splice(1, 2); //selecciona uno o varios de los elementos de el array
-//document.write(nombre);
-
-//nombre.forEach(function (elemento, indice) {
-    // console.log(elemento, indice); //muestra el listado junto con su numero o indice
-//})
-
-
-
-//texto.search(palabra.toString());
-
-//buscar un numero en texto
-//como ocupar filter
-let numeroarray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-let newnumeroarray = numeroarray.filter(item => {
-    return item > 5
-})
-//console.log('numeroarray =>', numeroarray)
-//console.log('newnumeroarray =>', newnumeroarray)
-// como ocupar bien join
-var x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-var y = x.join("+");
-//console.log(y);
-//para que sirve split
-var x = "1,2,3,4,5,6,7,8,9,10"
-//console.log(typeof (x));
-x = x.split(",");
-//console.log(x)
-//como ocupar map
-const myarray = [3, 5, 1];
-const nuevoarray = myarray.map(function (current) {
-    return current * 2;
-});
-//console.log('map', nuevoarray);
-
-//inicio de buscador de numeros
-
-
-function getNumbersInString(buscador) {
-    var divtexto = buscador.split("");
-    var arreglonuevo = divtexto.map(function (current) {
-        if (!isNaN(parseInt(current))) {
-            return current;
+var Champions = {
+    getEquipo: function (equipo) {
+        return {
+            nombre: document.getElementById("equipo" + equipo).value,
+            minutosConBalon: document.getElementById("minutosconbalon" + equipo).value,
+            tiros: document.getElementById("tiros" + equipo).value,
+            tirosArco: document.getElementById("tirosarco" + equipo).value,
+            pasesCompletados: document.getElementById("pasescompletados" + equipo).value,
+            pasesErrados: document.getElementById("paseserrados" + equipo).value,
+            goles: document.getElementById("goles" + equipo).value,
         }
-    });
-
-    var numeros = arreglonuevo.filter(function (value) {
-        return value != undefined;
-    });
-
-    return numeros.join("");
-};
-//current es el nombre de la funcion no se te olvide
-
-var texto1 = "dk2ls3akd2";
-var texto2 = "jdsajdsa4jdsasj";
-var texto3 = "djaksdj3 dskj12 ad2";
-//console.log(getNumbersInString(texto1));
-//console.log(getNumbersInString(texto2));
-//console.log(getNumbersInString(texto3));
-
-/*
-
-let cadena = "Este era un gato con los pies de trapo";
-
-let termino = "gato";*/
-/*
-let posicion = cadena.indexOf(termino);
-if (posicion !== -1)
-    console.log("La palabra está en la posición " + posicion);
-else
-    console.log("No encontré lo que estás buscando");*/
-
-
-var objeto = {
-    calculadora: function (num, signo, num2) {
-        let resultado = 0;
-        switch (signo) {
-            case "+":
-                resultado = num + num2;
-            case "-":
-                resultado = num - num2;
-            case "*":
-                resultado = num * num2;
-            case "/":
-                resultado = num / num2;
-        }
-        return resultado;
     },
-
-    contarvocales: function (texto) {
-        var contadorvocales = 0;
-        var vocales = ['a', 'e', 'i', 'o', 'u'];
-        for (var i = 0; i < texto.length; ++i) {
-            if (vocales.indexOf(texto[i]) >= 0) {
-                ++contadorvocales;
-            }
-        }
-        return contadorvocales;
+    calcular: function (equipo) {
+        //porcentajes resultados
+        equipo.posesion = 90 - equipo.minutosConBalon;
+        equipo.tirosytirosarco = (equipo.tiros / equipo.tirosArco);
+        equipo.pasesCompletosYerrados = (equipo.pasesCompletados / equipo.pasesErrados);
+        equipo.precisionTiros = (100 / equipo.tirosytirosarco);
+        equipo.precisionPases = (100 / equipo.pasesCompletosYerrados);
     },
+    presentar: function (equipoA, equipoB) {
+        var partido = "Partido de Champions " + equipoA.nombre + " VS " + equipoB.nombre;
+        var posesion = ("Posesion de " + equipoA.nombre + " es de un " + equipoA.posesion + "% " + " y la de " + equipoB.nombre + " es de " + equipoB.posesion + "%");
+        var tiros = ("precision de tiros de " + equipoA.nombre + " " + Math.trunc(equipoA.precisionTiros) + "%" + " / " + Math.trunc(equipoB.precisionTiros) + "% " + "precision de tiros de " + equipoB.nombre);
+        var pases = ("la precision de pases de " + equipoA.nombre + " fue " + Math.trunc(equipoA.precisionPases) + "%" + " / " + "Y la de " + equipoB.nombre + " fue de " + Math.trunc(equipoB.precisionPases) + "% ");
+        var ganador = ("El ganador es " + equipoA.nombre + " marcando " + equipoA.goles + " goles " + "Y pierde " + equipoB.nombre + " marcando " + equipoB.goles + " goles");
+        var nombreaform = equipoA.nombre;
+        var nombrebform = equipoB.nombre;
+        res = (partido + " " + posesion + " " + tiros + " " + pases + " " + ganador);
 
-    buscadorPalabra: function (texto, cadena) {
-        var posicion = cadena.indexOf(texto);
-        var contador = 0;
-        while (posicion >= 0) {
-            contador++;
-            cadena = cadena.slice(0, posicion) + "&%&/#$" + cadena.slice(posicion + texto.length);
-            posicion = cadena.indexOf(texto);
+        if (golesa < golesb) {
+            partido = ("Partido de Champions " + equipoA.nombre + " VS " + equipoB.nombre);
+            posesion = ("Posesion de " + equipoA.nombre + " es de un " + equipoA.posesion + "% " + " y la de " + equipoB.nombre + " es de " + equipoB.posesion + "%");
+            tiros = ("precision de tiros de " + equipoA.nombre + " " + Math.trunc(equipoA.precisionTiros) + "%" + " / " + Math.trunc(equipoB.precisionTiros) + "% " + "precision de tiros de " + equipoB.nombre);
+            pases = ("la precision de pases de " + equipoA.nombre + " fue " + Math.trunc(totalprecpasa) + "%" + " / " + "Y la de " + equipoB.nombre + " fue de " + Math.trunc(equipoB.precisionPases) + "% ");
+            ganador = ("El ganador es " + equipoB.nombre + " marcando " + equipoB.nombre + " goles " + "Y pierde " + equipoA.nombre + " marcando " + equipoA.goles + " goles ");
+            res = (partido + " " + posesion + " " + tiros + " " + pases + " " + ganador);
+            nombreaform = equipoA.nombre;
+            nombrebform = equipoB.nombre;
         }
-        return contador;
+        return document.getElementById("eq").innerHTML = partido, document.getElementById("pos").innerHTML = posesion, document.getElementById("tir").innerHTML = tiros, document.getElementById("pas").innerHTML = pases, document.getElementById("Res").innerHTML = ganador,
+            document.getElementById("equipoalineacion1").value = nombreaform, document.getElementById("equipoalineacion2").value = nombrebform,
+            document.getElementById("equipocancha1").value = nombreaform, document.getElementById("equipocancha2").value = nombrebform;
+    },
+    get: function () {
+        var equipoA = this.getEquipo('a');
+        var equipoB = this.getEquipo('b');
+        this.calcular(equipoA);
+        this.calcular(equipoB);
+        this.presentar(equipoA, equipoB);
     }
 };
 
-var operacion = objeto.calculadora(7, "-", 4);
-var operacion2 = objeto.calculadora(5, "*", 5);
-var operacion3 = objeto.calculadora(100, "+", 100);
-var operacion4 = objeto.calculadora(100, "/", 2);
-
-var voc = (objeto.contarvocales('aaaaaaaaeeaa'));
-var voc2 = (objeto.contarvocales('aa'));
-var voc3 = (objeto.contarvocales('sssasssaass'));
-var voc4 = (objeto.contarvocales('aaaaaaaaaaaaaaaaaaaaaaaaaaaa'));
-
-var retorno = objeto.buscadorPalabra("palabra", "fsdsfd palabra asldldsa palabra");
-var retorno2 = objeto.buscadorPalabra("aleman", "aleman asjksajsaka aleman sajjsaajs aleman");
-var retorno3 = objeto.buscadorPalabra("bayern", "bayern sajjdsajd bayern adsjasjd bayern asjdjasd bayern");
-var retorno4 = objeto.buscadorPalabra("sule", "sule sule sule sjjsjsjs sule sjsjjs sule sule sule");
-
-console.log(objeto);
-
-
-function obje(calculadora, contarvocales, buscadorPalabra) {
-    this.calculadora = calculadora;
-    this.contarvocales = contarvocales;
-    this.buscadorPalabra = buscadorPalabra;
+document.getElementById("listo").onclick = function () {
+    Champions.get();
 };
 
-var operacion1 = new obje((operacion), (voc), (retorno));
-console.log(operacion1);
-
-var operacion2 = new obje((operacion2), (voc2), (retorno2));
-console.log(operacion2);
-
-var operacion3 = new obje((operacion3), (voc3), (retorno3));
-console.log(operacion3);
-
-var operacion4 = new obje((operacion4), (voc4), (retorno4));
-console.log(operacion4);
-
-function preciototal(precio, impuestos, cobroenvio) {
-    var costoimpuestos = (1 + impuestos / 100) * precio;
-    var total = costoimpuestos + cobroenvio;
-    return total;
-}
-
-var preciot = preciototal(23.34, 16, 5);
-var otropreciot = preciototal(15.20, 4, 5);
-console.log(preciot);
-console.log(otropreciot);
-
-var partido = {
-    datospartido: function datospartido(minutosconbalona, tirosarcoa, tirosarcob, tirosa, tirosb, pasescompletadosa, pasescompletadosb, paseserradosa, paseserradosb, equipo1, equipo2, golesa, golesb) {
-        var posesiona = 90 - minutosconbalona;
-        var precisiontirosa = tirosarcoa / tirosa;
-        var totalprectira = 100 / precisiontirosa;
-        var precisiontirosb = tirosarcob / tirosb;
-        var totalprectirb = 100 / precisiontirosb;
-        var precisionpasesa = pasescompletadosa / paseserradosa;
-        var totalprecpasa = 100 / precisionpasesa;
-        var precisionpasesb = pasescompletadosb / paseserradosb;
-        var totalprecpasb = 100 / precisionpasesb;
-        var minutosjugados = 90
-        var partido = "";
-        var posesion = "";
-        var tiros = "";
-        var pases = "";
-       
-
-        if (minutosjugados == 90 && golesa > golesb) {
-            partido = ("| Partido de Champions " + equipo1 + " VS " + equipo2+ " | ")
-            posesion = ("Posesion de " + equipo1 + " " + posesiona + "% " + " / " + minutosconbalona + "% " + "Posesion de " + equipo2 + " | ");
-            tiros = ("precision de tiros de " + equipo1 + " " + Math.trunc(totalprectira) + "%" + " / " + Math.trunc(totalprectirb) + "% " + "precision de tiros de " + equipo2 + " | ");
-            pases = ("la precision de pases de " + equipo1 + " fue " + Math.trunc(totalprecpasa) + "%" + " / " + Math.trunc(totalprecpasb) + "% " + " | ");
-            var ganador = ("El ganador es " + equipo1 + " marcando " + golesa + " goles " + "Y pierde " + equipo2 + " marcando " + golesb + " goles|");
-            var res = (partido + " " + posesion + " " + tiros + " " + pases + " " + ganador);
-            return res;
-        } else (golesa < golesb); {
-            partido = ("| Partido de Champions " + equipo1 + " VS " + equipo2 + " | ")
-            posesion = ("Posesion de " + equipo1 + " " + posesiona + "% " + " / " + minutosconbalona + "% " + "Posesion de " + equipo2);
-            tiros = ("precision de tiros de " + equipo1 + " " + Math.trunc(totalprectira) + "%" + " / " + Math.trunc(totalprectirb) + "% " + "precision de tiros de " + equipo2);
-            pases = ("la precision de pases de " + equipo1 + " fue " + Math.trunc(totalprecpasa) + "%" + " / " + Math.trunc(totalprecpasb) + "% ");
-            var ganador = ("El ganador es " + equipo2 + " marcando " + golesa + " goles " + "Y pierde " + equipo1 + " marcando " + golesb + " goles|");
-            var res = (partido + " " + posesion + " " + tiros + " " + pases + " " + ganador);
-            return res;
+var alineaciones = {
+    Alineacion: function () {
+        return {
+            //  formulario de alineación 1
+            arquero1: document.getElementById("arquero1").value,
+            central1: document.getElementById("central1").value,
+            centrals1: document.getElementById("centrals1").value,
+            laterald1: document.getElementById("laterald1").value,
+            laterali1: document.getElementById("laterali1").value,
+            medioc1: document.getElementById("medioc1").value,
+            mediod1: document.getElementById("mediod1").value,
+            medioi1: document.getElementById("medioi1").value,
+            extremoi1: document.getElementById("extremoi1").value,
+            delanteroc1: document.getElementById("delanteroc1").value,
+            extremod1: document.getElementById("extremod1").value,
+            //  formulario de alineación 2
+            arquero2: document.getElementById("arquero2").value,
+            central2: document.getElementById("central2").value,
+            centrals2: document.getElementById("centrals2").value,
+            laterald2: document.getElementById("laterald2").value,
+            laterali2: document.getElementById("laterali2").value,
+            medioc2: document.getElementById("medioc2").value,
+            mediod2: document.getElementById("mediod2").value,
+            medioi2: document.getElementById("medioi2").value,
+            extremoi2: document.getElementById("extremoi2").value,
+            delanteroc2: document.getElementById("delanteroc2").value,
+            extremod2: document.getElementById("extremod2").value,
+            //  botones enviar
+            equipos: document.getElementById("Guardar").value,
+            //  visual cancha equipo 1
+            arquerov1: document.getElementById("arquerov1").value,
+            centralv1: document.getElementById("centralv1").value,
+            centralsv1: document.getElementById("centralsv1").value,
+            lateraldv1: document.getElementById("lateraldv1").value,
+            lateraliv1: document.getElementById("lateraliv1").value,
+            mediocv1: document.getElementById("mediocv1").value,
+            mediodv1: document.getElementById("mediodv1").value,
+            medioiv1: document.getElementById("medioiv1").value,
+            extremoiv1: document.getElementById("extremoiv1").value,
+            delanterocv1: document.getElementById("delanterocv1").value,
+            extremodv1: document.getElementById("extremodv1").value,
+            //  visual cancha equipo 2
+            arquerov2: document.getElementById("arquerov2").value,
+            centralv2: document.getElementById("centralv2").value,
+            centralsv2: document.getElementById("centralsv2").value,
+            lateraldv2: document.getElementById("lateraldv2").value,
+            lateraliv2: document.getElementById("lateraliv2").value,
+            mediocv2: document.getElementById("mediocv2").value,
+            mediodv2: document.getElementById("mediodv2").value,
+            medioiv2: document.getElementById("medioiv2").value,
+            extremoiv2: document.getElementById("extremoiv2").value,
+            delanterocv2: document.getElementById("delanterocv2").value,
+            extremodv2: document.getElementById("extremodv2").value,
         }
-    }
+    },
+    mostrar: function () {
+        return document.getElementById("arquerov1").value = arquero1.value,
+            document.getElementById("centralv1").value = central1.value, document.getElementById("centralsv1").value = centrals1.value, document.getElementById("lateraldv1").value = laterald1.value, document.getElementById("lateraliv1").value = laterali1.value,
+            document.getElementById("mediocv1").value = medioc1.value, document.getElementById("mediodv1").value = mediod1.value, document.getElementById("medioiv1").value = medioi1.value,
+            document.getElementById("extremoiv1").value = extremoi1.value, document.getElementById("delanterocv1").value = delanteroc1.value, document.getElementById("extremodv1").value = extremod1.value,
+            //equipo2
+            document.getElementById("arquerov2").value = arquero2.value,
+            document.getElementById("centralv2").value = central2.value, document.getElementById("centralsv2").value = centrals2.value, document.getElementById("lateraldv2").value = laterald2.value, document.getElementById("lateraliv2").value = laterali2.value,
+            document.getElementById("mediocv2").value = medioc2.value, document.getElementById("mediodv2").value = mediod2.value, document.getElementById("medioiv2").value = medioi2.value,
+            document.getElementById("extremoiv2").value = extremoi2.value, document.getElementById("delanterocv2").value = delanteroc2.value, document.getElementById("extremodv2").value = extremod2.value;
+    },
 };
-function partidos(datospartido) {
-    this.datospartido = datospartido;
+document.getElementById("guardar").onclick = function () {
+    alineaciones.mostrar();
 };
-
-var bayernvsbarca = partido.datospartido(60, 10, 5, 5, 3, 50, 25, 8, 14, "Bayern Munich", "Barca", 8, 2);
-
-var bayernvspsg = partido.datospartido(55, 7, 4, 3, 2, 44, 35, 12, 14, "Bayern Munich", "PSG", 1, 0);
-
-var partido1 = new partidos(bayernvsbarca);
-console.log(partido1);
-var partido2 = new partidos(bayernvspsg);
-console.log(partido2);
 
 
