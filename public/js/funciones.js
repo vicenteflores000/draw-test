@@ -4,6 +4,7 @@ var Champions = {
         return {
             nombre: document.getElementById("equipo" + equipo).value,
             minutosConBalon: document.getElementById("minutosconbalon" + equipo).value,
+            minutos: document.getElementById("minutos").value,
             tiros: document.getElementById("tiros" + equipo).value,
             tirosArco: document.getElementById("tirosarco" + equipo).value,
             pasesCompletados: document.getElementById("pasescompletados" + equipo).value,
@@ -12,16 +13,18 @@ var Champions = {
         }
     },
     calcular: function (equipo) {
-        //porcentajes resultados
-        equipo.posesion = 90 - equipo.minutosConBalon;
+        //Posesion
+        equipo.posesion = (equipo.minutosConBalon * 100) / equipo.minutos;
+        //Tiros
         equipo.tirosytirosarco = (equipo.tiros / equipo.tirosArco);
-        equipo.pasesCompletosYerrados = (equipo.pasesCompletados / equipo.pasesErrados);
         equipo.precisionTiros = (100 / equipo.tirosytirosarco);
+        //Pases
+        equipo.pasesCompletosYerrados = (equipo.pasesCompletados / equipo.pasesErrados);
         equipo.precisionPases = (100 / equipo.pasesCompletosYerrados);
     },
     presentar: function (equipoA, equipoB) {
         var partido = "Partido de Champions " + equipoA.nombre + " VS " + equipoB.nombre;
-        var posesion = ("Posesion de " + equipoA.nombre + " es de un " + equipoA.posesion + "% " + " y la de " + equipoB.nombre + " es de " + equipoB.posesion + "%");
+        var posesion = ("Posesion de " + equipoA.nombre + " es de un " + Math.trunc(equipoA.posesion) + "% " + " y la de " + equipoB.nombre + " es de " + Math.trunc(equipoB.posesion) + "%");
         var tiros = ("precision de tiros de " + equipoA.nombre + " " + Math.trunc(equipoA.precisionTiros) + "%" + " / " + Math.trunc(equipoB.precisionTiros) + "% " + "precision de tiros de " + equipoB.nombre);
         var pases = ("la precision de pases de " + equipoA.nombre + " fue " + Math.trunc(equipoA.precisionPases) + "%" + " / " + "Y la de " + equipoB.nombre + " fue de " + Math.trunc(equipoB.precisionPases) + "% ");
         var ganador = ("El ganador es " + equipoA.nombre + " marcando " + equipoA.goles + " goles " + "Y pierde " + equipoB.nombre + " marcando " + equipoB.goles + " goles");
@@ -31,10 +34,29 @@ var Champions = {
 
         if (golesa < golesb) {
             partido = ("Partido de Champions " + equipoA.nombre + " VS " + equipoB.nombre);
+            posesion = ("Posesion de " + equipoA.nombre + " es de un " + Math.trunc(equipoA.posesion) + "% " + " y la de " + equipoB.nombre + " es de " + Math.trunc(equipoB.posesion) + "%");
+            tiros = ("precision de tiros de " + equipoA.nombre + " " + Math.trunc(equipoA.precisionTiros) + "%" + " / " + Math.trunc(equipoB.precisionTiros) + "% " + "precision de tiros de " + equipoB.nombre);
+            pases = ("la precision de pases de " + equipoA.nombre + " fue " + Math.trunc(equipoA.precisionPases) + "%" + " / " + "Y la de " + equipoB.nombre + " fue de " + Math.trunc(equipoB.precisionPases) + "% ");
+            ganador = ("El ganador es " + equipoB.nombre + " marcando " + equipoB.goles + " goles " + "Y pierde " + equipoA.nombre + " marcando " + equipoA.goles + " goles ");
+            res = (partido + " " + posesion + " " + tiros + " " + pases + " " + ganador);
+            nombreaform = equipoA.nombre;
+            nombrebform = equipoB.nombre;
+        }
+        if (golesa > golesb) {
+            partido = ("Partido de Champions " + equipoA.nombre + " VS " + equipoB.nombre);
+            posesion = ("Posesion de " + equipoA.nombre + " es de un " + Math.trunc(equipoA.posesion) + "% " + " y la de " + equipoB.nombre + " es de " + Math.trunc(equipoB.posesion) + "%");
+            tiros = ("precision de tiros de " + equipoA.nombre + " " + Math.trunc(equipoA.precisionTiros) + "%" + " / " + Math.trunc(equipoB.precisionTiros) + "% " + "precision de tiros de " + equipoB.nombre);
+            pases = ("la precision de pases de " + equipoA.nombre + " fue " + Math.trunc(equipoA.precisionPases) + "%" + " / " + "Y la de " + equipoB.nombre + " fue de " + Math.trunc(equipoB.precisionPases) + "% ");
+            ganador = ("El ganador es " + equipoA.nombre + " marcando " + equipoA.goles + " goles " + "Y pierde " + equipoB.nombre + " marcando " + equipoB.goles + " goles ");
+            res = (partido + " " + posesion + " " + tiros + " " + pases + " " + ganador);
+            nombreaform = equipoA.nombre;
+            nombrebform = equipoB.nombre;
+        } if (golesa === golesb) {
+            partido = ("Partido de Champions " + equipoA.nombre + " VS " + equipoB.nombre);
             posesion = ("Posesion de " + equipoA.nombre + " es de un " + equipoA.posesion + "% " + " y la de " + equipoB.nombre + " es de " + equipoB.posesion + "%");
             tiros = ("precision de tiros de " + equipoA.nombre + " " + Math.trunc(equipoA.precisionTiros) + "%" + " / " + Math.trunc(equipoB.precisionTiros) + "% " + "precision de tiros de " + equipoB.nombre);
-            pases = ("la precision de pases de " + equipoA.nombre + " fue " + Math.trunc(totalprecpasa) + "%" + " / " + "Y la de " + equipoB.nombre + " fue de " + Math.trunc(equipoB.precisionPases) + "% ");
-            ganador = ("El ganador es " + equipoB.nombre + " marcando " + equipoB.nombre + " goles " + "Y pierde " + equipoA.nombre + " marcando " + equipoA.goles + " goles ");
+            pases = ("la precision de pases de " + equipoA.nombre + " fue " + Math.trunc(equipoA.precisionPases) + "%" + " / " + "Y la de " + equipoB.nombre + " fue de " + Math.trunc(equipoB.precisionPases) + "% ");
+            ganador = ("El partido termino en empate y cada equipo marco " + equipoA.goles + " goles ");
             res = (partido + " " + posesion + " " + tiros + " " + pases + " " + ganador);
             nombreaform = equipoA.nombre;
             nombrebform = equipoB.nombre;
@@ -57,74 +79,54 @@ document.getElementById("listo").onclick = function () {
 };
 
 var alineaciones = {
-    Alineacion: function () {
+    obtenerAlineacion: function (lado) {
         return {
-            //  formulario de alineación 1
-            arquero1: document.getElementById("arquero1").value,
-            central1: document.getElementById("central1").value,
-            centrals1: document.getElementById("centrals1").value,
-            laterald1: document.getElementById("laterald1").value,
-            laterali1: document.getElementById("laterali1").value,
-            medioc1: document.getElementById("medioc1").value,
-            mediod1: document.getElementById("mediod1").value,
-            medioi1: document.getElementById("medioi1").value,
-            extremoi1: document.getElementById("extremoi1").value,
-            delanteroc1: document.getElementById("delanteroc1").value,
-            extremod1: document.getElementById("extremod1").value,
-            //  formulario de alineación 2
-            arquero2: document.getElementById("arquero2").value,
-            central2: document.getElementById("central2").value,
-            centrals2: document.getElementById("centrals2").value,
-            laterald2: document.getElementById("laterald2").value,
-            laterali2: document.getElementById("laterali2").value,
-            medioc2: document.getElementById("medioc2").value,
-            mediod2: document.getElementById("mediod2").value,
-            medioi2: document.getElementById("medioi2").value,
-            extremoi2: document.getElementById("extremoi2").value,
-            delanteroc2: document.getElementById("delanteroc2").value,
-            extremod2: document.getElementById("extremod2").value,
-            //  botones enviar
-            equipos: document.getElementById("Guardar").value,
-            //  visual cancha equipo 1
-            arquerov1: document.getElementById("arquerov1").value,
-            centralv1: document.getElementById("centralv1").value,
-            centralsv1: document.getElementById("centralsv1").value,
-            lateraldv1: document.getElementById("lateraldv1").value,
-            lateraliv1: document.getElementById("lateraliv1").value,
-            mediocv1: document.getElementById("mediocv1").value,
-            mediodv1: document.getElementById("mediodv1").value,
-            medioiv1: document.getElementById("medioiv1").value,
-            extremoiv1: document.getElementById("extremoiv1").value,
-            delanterocv1: document.getElementById("delanterocv1").value,
-            extremodv1: document.getElementById("extremodv1").value,
-            //  visual cancha equipo 2
-            arquerov2: document.getElementById("arquerov2").value,
-            centralv2: document.getElementById("centralv2").value,
-            centralsv2: document.getElementById("centralsv2").value,
-            lateraldv2: document.getElementById("lateraldv2").value,
-            lateraliv2: document.getElementById("lateraliv2").value,
-            mediocv2: document.getElementById("mediocv2").value,
-            mediodv2: document.getElementById("mediodv2").value,
-            medioiv2: document.getElementById("medioiv2").value,
-            extremoiv2: document.getElementById("extremoiv2").value,
-            delanterocv2: document.getElementById("delanterocv2").value,
-            extremodv2: document.getElementById("extremodv2").value,
+            arquero: document.getElementById("arquero" + lado).value,
+            central: document.getElementById("central" + lado).value,
+            centrals: document.getElementById("centrals" + lado).value,
+            laterald: document.getElementById("laterald" + lado).value,
+            laterali: document.getElementById("laterali" + lado).value,
+            medioc: document.getElementById("medioc" + lado).value,
+            mediod: document.getElementById("mediod" + lado).value,
+            medioi: document.getElementById("medioi" + lado).value,
+            extremoi: document.getElementById("extremoi" + lado).value,
+            delanteroc: document.getElementById("delanteroc" + lado).value,
+            extremod: document.getElementById("extremod" + lado).value,
+            equipos: document.getElementById("Guardar")
         }
     },
-    mostrar: function () {
-        return document.getElementById("arquerov1").value = arquero1.value,
-            document.getElementById("centralv1").value = central1.value, document.getElementById("centralsv1").value = centrals1.value, document.getElementById("lateraldv1").value = laterald1.value, document.getElementById("lateraliv1").value = laterali1.value,
-            document.getElementById("mediocv1").value = medioc1.value, document.getElementById("mediodv1").value = mediod1.value, document.getElementById("medioiv1").value = medioi1.value,
-            document.getElementById("extremoiv1").value = extremoi1.value, document.getElementById("delanterocv1").value = delanteroc1.value, document.getElementById("extremodv1").value = extremod1.value,
-            //equipo2
-            document.getElementById("arquerov2").value = arquero2.value,
-            document.getElementById("centralv2").value = central2.value, document.getElementById("centralsv2").value = centrals2.value, document.getElementById("lateraldv2").value = laterald2.value, document.getElementById("lateraliv2").value = laterali2.value,
-            document.getElementById("mediocv2").value = medioc2.value, document.getElementById("mediodv2").value = mediod2.value, document.getElementById("medioiv2").value = medioi2.value,
-            document.getElementById("extremoiv2").value = extremoi2.value, document.getElementById("delanterocv2").value = delanteroc2.value, document.getElementById("extremodv2").value = extremod2.value;
+    mostrar: function (lado1,lado2) {
+        document.getElementById("arquerov1").value = lado1.arquero;
+        document.getElementById("centralv1").value = lado1.central;
+        document.getElementById("centralsv1").value = lado1.centrals;
+        document.getElementById("lateraldv1").value = lado1.laterald;
+        document.getElementById("lateraliv1").value = lado1.laterali;
+        document.getElementById("mediocv1").value = lado1.medioc;
+        document.getElementById("mediodv1").value = lado1.mediod;
+        document.getElementById("medioiv1").value = lado1.medioi;
+        document.getElementById("extremoiv1").value = lado1.extremoi;
+        document.getElementById("delanterocv1").value = lado1.delanteroc;
+        document.getElementById("extremodv1").value = lado1.extremod;
+        document.getElementById("arquerov2").value = lado2.arquero;
+        document.getElementById("centralv2").value = lado2.central;
+        document.getElementById("centralsv2").value = lado2.centrals;
+        document.getElementById("lateraldv2").value = lado2.laterald;
+        document.getElementById("lateraliv2").value = lado2.laterali;
+        document.getElementById("mediocv2").value = lado2.medioc;
+        document.getElementById("mediodv2").value = lado2.mediod;
+        document.getElementById("medioiv2").value = lado2.medioi;
+        document.getElementById("extremoiv2").value = lado2.extremoi;
+        document.getElementById("delanterocv2").value = lado2.delanteroc;
+        document.getElementById("extremodv2").value = lado2.extremod;
     },
+    obtener: function () {
+        var lado1 = this.obtenerAlineacion("1");
+        var lado2 = this.obtenerAlineacion("2");
+        this.mostrar(lado1, lado2);
+    }
 };
 document.getElementById("guardar").onclick = function () {
-    alineaciones.mostrar();
+    alineaciones.obtener();
 };
 
 
