@@ -23,46 +23,37 @@ var Champions = {
         equipo.precisionPases = (100 / equipo.pasesCompletosYerrados);
     },
     presentar: function (equipoA, equipoB) {
-        var partido = "Partido de Champions " + equipoA.nombre + " VS " + equipoB.nombre;
-        var posesion = ("Posesion de " + equipoA.nombre + " es de un " + Math.trunc(equipoA.posesion) + "% " + " y la de " + equipoB.nombre + " es de " + Math.trunc(equipoB.posesion) + "%");
-        var tiros = ("precision de tiros de " + equipoA.nombre + " " + Math.trunc(equipoA.precisionTiros) + "%" + " / " + Math.trunc(equipoB.precisionTiros) + "% " + "precision de tiros de " + equipoB.nombre);
-        var pases = ("la precision de pases de " + equipoA.nombre + " fue " + Math.trunc(equipoA.precisionPases) + "%" + " / " + "Y la de " + equipoB.nombre + " fue de " + Math.trunc(equipoB.precisionPases) + "% ");
-        var ganador = ("El ganador es " + equipoA.nombre + " marcando " + equipoA.goles + " goles " + "Y pierde " + equipoB.nombre + " marcando " + equipoB.goles + " goles");
-        var nombreaform = equipoA.nombre;
-        var nombrebform = equipoB.nombre;
-        res = (partido + " " + posesion + " " + tiros + " " + pases + " " + ganador);
-
-        if (golesa < golesb) {
+        if (equipoA.goles < equipoB.goles) {
             partido = ("Partido de Champions " + equipoA.nombre + " VS " + equipoB.nombre);
             posesion = ("Posesion de " + equipoA.nombre + " es de un " + Math.trunc(equipoA.posesion) + "% " + " y la de " + equipoB.nombre + " es de " + Math.trunc(equipoB.posesion) + "%");
-            tiros = ("precision de tiros de " + equipoA.nombre + " " + Math.trunc(equipoA.precisionTiros) + "%" + " / " + Math.trunc(equipoB.precisionTiros) + "% " + "precision de tiros de " + equipoB.nombre);
-            pases = ("la precision de pases de " + equipoA.nombre + " fue " + Math.trunc(equipoA.precisionPases) + "%" + " / " + "Y la de " + equipoB.nombre + " fue de " + Math.trunc(equipoB.precisionPases) + "% ");
+            tiros = ("El promedio de tiros errados de " + equipoA.nombre + " " + Math.trunc(equipoA.precisionTiros) + "%" + " / " + Math.trunc(equipoB.precisionTiros) + "% " + " fue el promedio tiros errados de " + equipoB.nombre);
+            pases = ("El promedio de pases errados de " + equipoA.nombre + " fue " + Math.trunc(equipoA.precisionPases) + "%" + " / " + "Y la de " + equipoB.nombre + " fue de " + Math.trunc(equipoB.precisionPases) + "% ");
             ganador = ("El ganador es " + equipoB.nombre + " marcando " + equipoB.goles + " goles " + "Y pierde " + equipoA.nombre + " marcando " + equipoA.goles + " goles ");
             res = (partido + " " + posesion + " " + tiros + " " + pases + " " + ganador);
             nombreaform = equipoA.nombre;
             nombrebform = equipoB.nombre;
         }
-        if (golesa > golesb) {
+        if (equipoA.goles > equipoB.goles) {
             partido = ("Partido de Champions " + equipoA.nombre + " VS " + equipoB.nombre);
             posesion = ("Posesion de " + equipoA.nombre + " es de un " + Math.trunc(equipoA.posesion) + "% " + " y la de " + equipoB.nombre + " es de " + Math.trunc(equipoB.posesion) + "%");
-            tiros = ("precision de tiros de " + equipoA.nombre + " " + Math.trunc(equipoA.precisionTiros) + "%" + " / " + Math.trunc(equipoB.precisionTiros) + "% " + "precision de tiros de " + equipoB.nombre);
-            pases = ("la precision de pases de " + equipoA.nombre + " fue " + Math.trunc(equipoA.precisionPases) + "%" + " / " + "Y la de " + equipoB.nombre + " fue de " + Math.trunc(equipoB.precisionPases) + "% ");
+            tiros = ("El promedio de tiros errados de " + equipoA.nombre + " " + Math.trunc(equipoA.precisionTiros) + "%" + " / " + Math.trunc(equipoB.precisionTiros) + "% " + " fue el promedio tiros errados de " + equipoB.nombre);
+            pases = ("El promedio de pases errados de " + equipoA.nombre + " fue " + Math.trunc(equipoA.precisionPases) + "%" + " / " + "Y la de " + equipoB.nombre + " fue de " + Math.trunc(equipoB.precisionPases) + "% ");
             ganador = ("El ganador es " + equipoA.nombre + " marcando " + equipoA.goles + " goles " + "Y pierde " + equipoB.nombre + " marcando " + equipoB.goles + " goles ");
             res = (partido + " " + posesion + " " + tiros + " " + pases + " " + ganador);
             nombreaform = equipoA.nombre;
             nombrebform = equipoB.nombre;
-        } if (golesa === golesb) {
+        } if (equipoA.goles === equipoB.goles) {
             partido = ("Partido de Champions " + equipoA.nombre + " VS " + equipoB.nombre);
             posesion = ("Posesion de " + equipoA.nombre + " es de un " + equipoA.posesion + "% " + " y la de " + equipoB.nombre + " es de " + equipoB.posesion + "%");
-            tiros = ("precision de tiros de " + equipoA.nombre + " " + Math.trunc(equipoA.precisionTiros) + "%" + " / " + Math.trunc(equipoB.precisionTiros) + "% " + "precision de tiros de " + equipoB.nombre);
-            pases = ("la precision de pases de " + equipoA.nombre + " fue " + Math.trunc(equipoA.precisionPases) + "%" + " / " + "Y la de " + equipoB.nombre + " fue de " + Math.trunc(equipoB.precisionPases) + "% ");
+            tiros = ("El promedio de tiros errados de " + equipoA.nombre + " " + Math.trunc(equipoA.precisionTiros) + "%" + " / " + Math.trunc(equipoB.precisionTiros) + "% " + " fue el promedio tiros errados de " + equipoB.nombre);
+            pases = ("El promedio de pases errados de " + equipoA.nombre + " fue " + Math.trunc(equipoA.precisionPases) + "%" + " / " + "Y la de " + equipoB.nombre + " fue de " + Math.trunc(equipoB.precisionPases) + "% ");
             ganador = ("El partido termino en empate y cada equipo marco " + equipoA.goles + " goles ");
             res = (partido + " " + posesion + " " + tiros + " " + pases + " " + ganador);
             nombreaform = equipoA.nombre;
             nombrebform = equipoB.nombre;
         }
         return document.getElementById("eq").innerHTML = partido, document.getElementById("pos").innerHTML = posesion, document.getElementById("tir").innerHTML = tiros, document.getElementById("pas").innerHTML = pases, document.getElementById("Res").innerHTML = ganador,
-            document.getElementById("equipoalineacion1").value = nombreaform, document.getElementById("equipoalineacion2").value = nombrebform,
+            document.getElementById("equipoAlineacion1").value = nombreaform, document.getElementById("EquipoAlineacion2").value = nombrebform,
             document.getElementById("equipocancha1").value = nombreaform, document.getElementById("equipocancha2").value = nombrebform;
     },
     get: function () {
@@ -79,54 +70,70 @@ document.getElementById("listo").onclick = function () {
 };
 
 var alineaciones = {
-    obtenerAlineacion: function (lado) {
+    obtenerAlineacion: function (Lado) {
         return {
-            arquero: document.getElementById("arquero" + lado).value,
-            central: document.getElementById("central" + lado).value,
-            centrals: document.getElementById("centrals" + lado).value,
-            laterald: document.getElementById("laterald" + lado).value,
-            laterali: document.getElementById("laterali" + lado).value,
-            medioc: document.getElementById("medioc" + lado).value,
-            mediod: document.getElementById("mediod" + lado).value,
-            medioi: document.getElementById("medioi" + lado).value,
-            extremoi: document.getElementById("extremoi" + lado).value,
-            delanteroc: document.getElementById("delanteroc" + lado).value,
-            extremod: document.getElementById("extremod" + lado).value,
-            equipos: document.getElementById("Guardar")
+            Arquero: document.getElementById("Arquero" + Lado).value,
+            Central: document.getElementById("Central" + Lado).value,
+            Centrals: document.getElementById("CentralSegundo" + Lado).value,
+            Laterald: document.getElementById("LateralDerecho" + Lado).value,
+            Laterali: document.getElementById("LateralIzquierdo" + Lado).value,
+            Medioc: document.getElementById("MedioCentro" + Lado).value,
+            Mediod: document.getElementById("MedioDerecho" + Lado).value,
+            Medioi: document.getElementById("MedioIzquierdo" + Lado).value,
+            Extremoi: document.getElementById("ExtremoIzquierdo" + Lado).value,
+            Delanteroc: document.getElementById("DelanteroCentro" + Lado).value,
+            Extremod: document.getElementById("ExtremoDerecho" + Lado).value,
         }
     },
-    mostrar: function (lado1,lado2) {
-        document.getElementById("arquerov1").value = lado1.arquero;
-        document.getElementById("centralv1").value = lado1.central;
-        document.getElementById("centralsv1").value = lado1.centrals;
-        document.getElementById("lateraldv1").value = lado1.laterald;
-        document.getElementById("lateraliv1").value = lado1.laterali;
-        document.getElementById("mediocv1").value = lado1.medioc;
-        document.getElementById("mediodv1").value = lado1.mediod;
-        document.getElementById("medioiv1").value = lado1.medioi;
-        document.getElementById("extremoiv1").value = lado1.extremoi;
-        document.getElementById("delanterocv1").value = lado1.delanteroc;
-        document.getElementById("extremodv1").value = lado1.extremod;
-        document.getElementById("arquerov2").value = lado2.arquero;
-        document.getElementById("centralv2").value = lado2.central;
-        document.getElementById("centralsv2").value = lado2.centrals;
-        document.getElementById("lateraldv2").value = lado2.laterald;
-        document.getElementById("lateraliv2").value = lado2.laterali;
-        document.getElementById("mediocv2").value = lado2.medioc;
-        document.getElementById("mediodv2").value = lado2.mediod;
-        document.getElementById("medioiv2").value = lado2.medioi;
-        document.getElementById("extremoiv2").value = lado2.extremoi;
-        document.getElementById("delanterocv2").value = lado2.delanteroc;
-        document.getElementById("extremodv2").value = lado2.extremod;
+    mostrar: function (Lado, Equipo) {
+        document.getElementById("ArqueroV" + Equipo).value = Lado.Arquero;
+        document.getElementById("CentralV" + Equipo).value = Lado.Central;
+        document.getElementById("CentralSV" + Equipo).value = Lado.Centrals;
+        document.getElementById("LateralDV" + Equipo).value = Lado.Laterald;
+        document.getElementById("LateralIV" + Equipo).value = Lado.Laterali;
+        document.getElementById("MedioCV" + Equipo).value = Lado.Medioc;
+        document.getElementById("MedioDV" + Equipo).value = Lado.Mediod;
+        document.getElementById("MedioIV" + Equipo).value = Lado.Medioi;
+        document.getElementById("ExtremoIV" + Equipo).value = Lado.Extremoi;
+        document.getElementById("DelanteroCV" + Equipo).value = Lado.Delanteroc;
+        document.getElementById("ExtremoDV" + Equipo).value = Lado.Extremod;
     },
     obtener: function () {
-        var lado1 = this.obtenerAlineacion("1");
-        var lado2 = this.obtenerAlineacion("2");
-        this.mostrar(lado1, lado2);
+        var Lado1 = this.obtenerAlineacion("1");
+        var Lado2 = this.obtenerAlineacion("2");
+        var LadoA = this.mostrar(Lado1, "1");
+        var LadoB = this.mostrar(Lado2, "2");
+        console.log(Lado1);
+        console.log(Lado2);
     }
 };
-document.getElementById("guardar").onclick = function () {
+document.getElementById("Guardar").onclick = function () {
     alineaciones.obtener();
 };
 
+var Thebest = {
+    tenerPersonales: function () {
+        return {
+            goleador: document.getElementById("goleador").value,
+            asistidor: document.getElementById("asistidor").value,
+            entrador: document.getElementById("entrador").value
+        }
+    },
+    destacadosvisual: function () {
+        var inputgoleador = document.getElementById("nombregoleador").value;
+        var inputasistidor = document.getElementById("nombreasistidor").value;
+        var inputquita = document.getElementById("nombrequita").value;
 
+        document.getElementById("tablagoleador").value = "Realizando buenos remates al arco el jugador " + inputgoleador + " fue el maximo goleador del partido marcando " + goleador.value + " goles";
+        document.getElementById("tablaasistidor").value = "Con una buena calidad de pases el jugador " + inputasistidor + " en este partido obtuvo una cantidad de " + asistidor.value + " asistencias quedando como maximo asistidor de esta jornada";
+        document.getElementById("tablaentrador").value = "Obteniendo un gran desempeño defensivo el jugador " + inputquita + " logro robar el balon " + entrador.value + " veces siendo el jugador con mas entradas realizadas";
+
+        document.getElementById("inputgoleador").value = inputgoleador;
+        document.getElementById("inputasistidor").value = inputasistidor;
+        document.getElementById("inputentradas").value = inputquita;
+    },
+};
+
+document.getElementById("guardarpersonales").onclick = function () {
+    Thebest.destacadosvisual();
+};

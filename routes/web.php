@@ -11,6 +11,11 @@ Route::get('funcionesmatt', function () {
     return view('funcionesmatt');
 });
 
+Route::get('cursophp', function () {
+    return view('cursophp');
+});
+
+
 Route::get('autos', function () {
     return view('autos');
 });
